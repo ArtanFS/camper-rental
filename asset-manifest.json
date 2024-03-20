@@ -1,13 +1,19 @@
 {
   "files": {
     "main.css": "/camperrent/static/css/main.3166a577.css",
-    "main.js": "/camperrent/static/js/main.d0c05e2b.js",
+    "main.js": "/camperrent/static/js/main.1688ac80.js",
+    "static/js/983.d192ce2f.chunk.js": "/camperrent/static/js/983.d192ce2f.chunk.js",
+    "static/js/300.5f0324ef.chunk.js": "/camperrent/static/js/300.5f0324ef.chunk.js",
+    "static/js/697.126340ed.chunk.js": "/camperrent/static/js/697.126340ed.chunk.js",
     "index.html": "/camperrent/index.html",
     "main.3166a577.css.map": "/camperrent/static/css/main.3166a577.css.map",
-    "main.d0c05e2b.js.map": "/camperrent/static/js/main.d0c05e2b.js.map"
+    "main.1688ac80.js.map": "/camperrent/static/js/main.1688ac80.js.map",
+    "983.d192ce2f.chunk.js.map": "/camperrent/static/js/983.d192ce2f.chunk.js.map",
+    "300.5f0324ef.chunk.js.map": "/camperrent/static/js/300.5f0324ef.chunk.js.map",
+    "697.126340ed.chunk.js.map": "/camperrent/static/js/697.126340ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3166a577.css",
-    "static/js/main.d0c05e2b.js"
+    "static/js/main.1688ac80.js"
   ]
 }
