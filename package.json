@@ -1,8 +1,8 @@
 {
-  "name": "camperrent",
+  "name": "campersrent",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ArtanFS.github.io/camperrent/",
+  "homepage": "https://ArtanFS.github.io/campersrent/",
   "dependencies": {
     "axios": "^1.6.8",
     "react": "^18.1.0",
