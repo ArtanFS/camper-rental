@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcamperrent=self.webpackChunkcamperrent||[]).push([[359],{359:(e,s,r)=>{r.r(s),r.d(s,{default:()=>t});r(43);var a=r(579);const c=()=>(0,a.jsx)("div",{children:"Catalog"}),n=()=>(0,a.jsx)("div",{children:"Filters"}),t=()=>(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(n,{}),(0,a.jsx)(c,{})]})}}]);
-//# sourceMappingURL=359.a7fd98f7.chunk.js.map
