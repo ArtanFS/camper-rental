@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/camper-rental/static/css/main.3166a577.css",
+    "main.js": "/camper-rental/static/js/main.d0c05e2b.js",
+    "index.html": "/camper-rental/index.html",
+    "main.3166a577.css.map": "/camper-rental/static/css/main.3166a577.css.map",
+    "main.d0c05e2b.js.map": "/camper-rental/static/js/main.d0c05e2b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3166a577.css",
+    "static/js/main.d0c05e2b.js"
+  ]
+}
