@@ -1,5 +1,5 @@
 import CamperCard from 'components/CamperCard/CamperCard';
-
+import css from './Catalog.module.css';
 const campers = [
   {
     _id: '1',
@@ -59,7 +59,7 @@ const campers = [
 
 const Catalog = () => {
   return (
-    <section>
+    <section className={css.catalog_section}>
       <ul>
         {campers.map(camper => (
           <CamperCard key={camper._id} data={camper} />

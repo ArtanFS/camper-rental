@@ -1,9 +1,9 @@
 import Icon from 'components/Icon/Icon';
 
-const Option = ({ id, children }) => {
+const Option = ({ className, classNameIcon, id, children }) => {
   return (
-    <div>
-      <Icon className="" id={id} />
+    <div className={className}>
+      <Icon className={classNameIcon} id={id} />
       {children}
     </div>
   );

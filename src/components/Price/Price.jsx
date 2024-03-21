@@ -1,5 +1,5 @@
-const Price = ({ price }) => {
-  return <p>{'\u20AC' + price + '0.00'}</p>;
+const Price = ({ className, price }) => {
+  return <p className={className}>{'\u20AC' + price + '.00'}</p>;
 };
 
 export default Price;

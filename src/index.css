@@ -1,15 +1,54 @@
 @import-normalize;
 
+:root {
+  --main-color: #101828;
+  --bg-color: #fff;
+  --placeholder1-color: rgba(16, 24, 40, 0.6);
+  --border-card-color: rgba(16, 24, 40, 0.2);
+  --placeholder3-color: rgba(16, 24, 40, 0.1);
+  --text-color: #475467;
+  --border2-color: rgba(71, 84, 103, 0.2);
+  --btn-color: #e44848;
+  --btn-active-color: #d84343;
+  --rating-color: #ffc531;
+  --features-color: #f2f4f7;
+  --input-color: #f7f7f7;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   margin-block-start: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  color: #212121;
-  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  color: var(--main-color);
+  background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 code {
@@ -25,8 +64,9 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%; */
+  width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -35,8 +75,20 @@ h3,
 h4,
 h5,
 h6,
-p {
+ul,
+p,
+input,
+button {
   margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 button,
@@ -46,6 +98,20 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
   margin: 0px;
 }
+
+button {
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  background-color: transparent;
+}
+
+#root {
+  height: 100%;
+}
+
+/* address {
+  font-style: normal;
+} */

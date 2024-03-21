@@ -1,11 +1,11 @@
 import Icon from 'components/Icon/Icon';
 
-const Location = ({ location }) => {
+const Location = ({ className, classNameIcon, location }) => {
   return (
-    <>
-      <Icon className="" id="locate" />
+    <div className={className}>
+      <Icon className={classNameIcon} id="locate" />
       <p>{location}</p>
-    </>
+    </div>
   );
 };
 

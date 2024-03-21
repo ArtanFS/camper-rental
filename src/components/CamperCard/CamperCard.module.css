@@ -1,0 +1,134 @@
+.card_item {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  height: 358px;
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid var(--border-card-color);
+}
+
+.card_img_wrap {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card_img {
+  object-fit: cover;
+}
+
+.card_info_wrap {
+  width: 526px;
+  height: 310px;
+}
+
+.card_title_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card_title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.favorite_icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+}
+
+.favorite_icon:hover {
+  transform: scale(1.2);
+}
+
+.card_price_wrap {
+  display: flex;
+  gap: 12px;
+}
+
+.card_rating_wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card_rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  text-decoration-line: underline;
+}
+
+.card_rating_icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating-color);
+}
+
+.card_location {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.card_location_icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--main-color);
+}
+
+.card_description {
+  width: 525px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+.card_option_wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.card_option {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: var(--features-color);
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.card_option_icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-color);
+}
+
+.card_info_btn {
+  padding: 16px 40px;
+  border-radius: 200px;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+}
+
+.card_info_btn:hover {
+  background-color: var(--btn-active-color);
+}
