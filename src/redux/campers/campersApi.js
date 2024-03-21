@@ -27,14 +27,17 @@ const api = axios.create({
 //   }
 // );
 
-export const getCampers = createAsyncThunk('getCampers', async thunkAPI => {
-  try {
-    const { data } = await api.get(`adverts`);
-    return data;
-  } catch (e) {
-    return thunkAPI.rejectWithValue(e.message);
+export const getCampers = createAsyncThunk(
+  'getCampers',
+  async (page = 1, thunkAPI) => {
+    try {
+      const { data } = await api.get(`adverts?p=${page}&l=4`);
+      return data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
   }
-});
+);
 
 // export const addColumn = createAsyncThunk(
 //   'columns/addColumn',

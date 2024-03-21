@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getCampers } from './campersApi';
 // import {
 //   getColumns,
 //   addColumn,
@@ -28,17 +29,19 @@ const handleRejected = (state, { payload }) => {
 //   state.shownBoard.columns = payload;
 // };
 
-// const handleFulfilledGetCards = (state, { payload }) => {
-//   state.isLoading = false;
-//   state.error = null;
-//   if (payload.length && payload[0]._id) {
-//     const columnIdx = state.shownBoard.columns.findIndex(
-//       col => col._id === payload[0].columnId
-//     );
-//     if (!state.shownBoard.columns[columnIdx].cards.length)
-//       state.shownBoard.columns[columnIdx].cards.push(...payload);
-//   }
-// };
+const handleFulfilledGetCampers = (state, { payload }) => {
+  state.isLoading = false;
+  state.error = null;
+  state.campers = payload;
+
+  // if (payload.length && payload[0]._id) {
+  //   const columnIdx = state.shownBoard.columns.findIndex(
+  //     col => col._id === payload[0].columnId
+  //   );
+  //   if (!state.shownBoard.columns[columnIdx].cards.length)
+  //     state.shownBoard.columns[columnIdx].cards.push(...payload);
+  // }
+};
 
 // const handleFulfilledAddColumn = (state, { payload }) => {
 //   state.isLoading = false;
@@ -151,7 +154,7 @@ const campersSlice = createSlice({
       //   .addCase(editCard.fulfilled, handleFulfilledEditCard)
       //   .addCase(transportCard.fulfilled, handleFulfilledTransportCard)
       //   .addCase(deleteCard.fulfilled, handleFulfilledDeleteCard)
-      //   .addCase(getColumns.fulfilled, handleFulfilledGetColumns)
+      .addCase(getCampers.fulfilled, handleFulfilledGetCampers)
       //   .addCase(fetchCards.fulfilled, handleFulfilledGetCards)
       //   .addCase(addColumn.fulfilled, handleFulfilledAddColumn)
       //   .addCase(deleteColumn.fulfilled, handleFulfilledDeleteColumn)
