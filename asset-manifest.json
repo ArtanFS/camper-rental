@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/campersrent/static/css/main.683600fa.css",
-    "main.js": "/campersrent/static/js/main.4a02717a.js",
+    "main.css": "/campersrent/static/css/main.bb05b677.css",
+    "main.js": "/campersrent/static/js/main.0c58c3ef.js",
     "static/js/989.2aa3c7ba.chunk.js": "/campersrent/static/js/989.2aa3c7ba.chunk.js",
-    "static/js/769.e8a82bca.chunk.js": "/campersrent/static/js/769.e8a82bca.chunk.js",
+    "static/css/38.7353109a.chunk.css": "/campersrent/static/css/38.7353109a.chunk.css",
+    "static/js/38.20df2188.chunk.js": "/campersrent/static/js/38.20df2188.chunk.js",
     "static/js/879.8d6267b2.chunk.js": "/campersrent/static/js/879.8d6267b2.chunk.js",
-    "static/media/sprite.svg": "/campersrent/static/media/sprite.29894a425d082e90ca8e44806b1fa8ce.svg",
+    "static/media/Inter-SemiBold.ttf": "/campersrent/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
+    "static/media/Inter-Medium.ttf": "/campersrent/static/media/Inter-Medium.3f7acfe50aad7ad68548.ttf",
+    "static/media/Inter-Regular.ttf": "/campersrent/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/sprite.svg": "/campersrent/static/media/sprite.0ce1a61bfd272493ff9030c578b633fc.svg",
     "index.html": "/campersrent/index.html",
-    "main.683600fa.css.map": "/campersrent/static/css/main.683600fa.css.map",
-    "main.4a02717a.js.map": "/campersrent/static/js/main.4a02717a.js.map",
+    "main.bb05b677.css.map": "/campersrent/static/css/main.bb05b677.css.map",
+    "main.0c58c3ef.js.map": "/campersrent/static/js/main.0c58c3ef.js.map",
     "989.2aa3c7ba.chunk.js.map": "/campersrent/static/js/989.2aa3c7ba.chunk.js.map",
-    "769.e8a82bca.chunk.js.map": "/campersrent/static/js/769.e8a82bca.chunk.js.map",
+    "38.7353109a.chunk.css.map": "/campersrent/static/css/38.7353109a.chunk.css.map",
+    "38.20df2188.chunk.js.map": "/campersrent/static/js/38.20df2188.chunk.js.map",
     "879.8d6267b2.chunk.js.map": "/campersrent/static/js/879.8d6267b2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.683600fa.css",
-    "static/js/main.4a02717a.js"
+    "static/css/main.bb05b677.css",
+    "static/js/main.0c58c3ef.js"
   ]
 }
