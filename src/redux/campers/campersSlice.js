@@ -32,7 +32,12 @@ const handleRejected = (state, { payload }) => {
 const handleFulfilledGetCampers = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.campers = payload;
+
+  if (payload.length) {
+    if (!state.campers.length) state.campers.push(...payload);
+    else if (state.campers[0]._id !== payload[0]._id)
+      state.campers.push(...payload);
+  }
 
   // if (payload.length && payload[0]._id) {
   //   const columnIdx = state.shownBoard.columns.findIndex(

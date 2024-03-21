@@ -29,7 +29,7 @@ const api = axios.create({
 
 export const getCampers = createAsyncThunk(
   'getCampers',
-  async (page = 1, thunkAPI) => {
+  async (page, thunkAPI) => {
     try {
       const { data } = await api.get(`adverts?p=${page}&l=4`);
       return data;

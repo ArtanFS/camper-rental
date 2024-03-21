@@ -6,4 +6,16 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 50px;
+}
+
+.loadmore_btn {
+  display: block;
+  padding: 16px 32px;
+  border-radius: 200px;
+  border: 1px solid var(--border-light-color);
+  color: var(--main-color);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 auto;
 }

@@ -3,11 +3,11 @@
 :root {
   --main-color: #101828;
   --bg-color: #fff;
-  --placeholder1-color: rgba(16, 24, 40, 0.6);
-  --border-card-color: rgba(16, 24, 40, 0.2);
-  --placeholder3-color: rgba(16, 24, 40, 0.1);
+  --placeholder1-color: #10182899;
+  --border-card-color: #10182833;
+  --placeholder3-color: #1018281a;
   --text-color: #475467;
-  --border2-color: rgba(71, 84, 103, 0.2);
+  --border-light-color: #47546733;
   --btn-color: #e44848;
   --btn-active-color: #d84343;
   --rating-color: #ffc531;
