@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import Button from 'components/ScreensPage/Button/Button';
-import Icon from 'components/ScreensPage/Icon/Icon';
+import Button from 'components/Button/Button';
+import Icon from 'components/Icon/Icon';
 import css from './Modal.module.css';
 
-const modalRoot = document.querySelector('#modal-root2');
+const modalRoot = document.querySelector('#modal-root');
 
 const Modal = ({ children, openModal }) => {
   useEffect(() => {
@@ -31,7 +31,7 @@ const Modal = ({ children, openModal }) => {
     <div className={css.backdrop} onClick={handleBackdropClick}>
       <div className={css.modal}>
         <Button className={css.close_btn} onClick={() => openModal()}>
-          <Icon className={css.icon} id="icon-plus" />
+          <Icon className={css.icon} id="cross" />
         </Button>
         {children}
       </div>

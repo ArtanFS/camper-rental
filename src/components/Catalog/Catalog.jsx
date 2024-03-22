@@ -2,14 +2,22 @@ import CamperCard from 'components/CamperCard/CamperCard';
 import { useCampers } from 'hooks/useCampers';
 import css from './Catalog.module.css';
 import Button from 'components/Button/Button';
-// import { useState } from 'react';
+import Modal from 'components/Modal/Modal';
+import { useState } from 'react';
 
 const Catalog = ({ loadMore }) => {
   // const [isLoadMoreDisabled, setIsLoadMoreDisabled] = useState(false);
+  const [openDetailsModal, setOpenDetailsModal] = useState(false);
   const campers = useCampers();
+
+  const openModal = () => {
+    setOpenDetailsModal(!openDetailsModal);
+  };
+
   // const cards = campers.length;
 
   // if (!Number.isInteger(cards / 4)) console.log(isLoadMoreDisabled);
+
   return (
     <section className={css.catalog_section}>
       <ul className={css.card_list}>
@@ -24,6 +32,15 @@ const Catalog = ({ loadMore }) => {
         >
           Load more
         </Button>
+      )}
+      <Button className={css.loadmore_btn} onClick={openModal}>
+        Open modal
+      </Button>
+      {openDetailsModal && (
+        <Modal openModal={openModal}>
+          <p>Привіт!</p>
+          {/* <AddColumn closeModal={openModal} /> */}
+        </Modal>
       )}
     </section>
   );

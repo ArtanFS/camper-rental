@@ -13,6 +13,7 @@
   --rating-color: #ffc531;
   --features-color: #f2f4f7;
   --input-color: #f7f7f7;
+  --backdrop: rgba(0, 0, 0, 0.6);
 }
 
 @font-face {
