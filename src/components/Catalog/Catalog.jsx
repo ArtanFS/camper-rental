@@ -16,13 +16,15 @@ const Catalog = ({ loadMore }) => {
         {campers.length > 0 &&
           campers.map(camper => <CamperCard key={camper._id} data={camper} />)}
       </ul>
-      <Button
-        className={css.loadmore_btn}
-        onClick={loadMore}
-        // disabled={isLoadMoreDisabled}
-      >
-        Load more
-      </Button>
+      {campers.length > 0 && (
+        <Button
+          className={css.loadmore_btn}
+          onClick={loadMore}
+          // disabled={isLoadMoreDisabled}
+        >
+          Load more
+        </Button>
+      )}
     </section>
   );
 };

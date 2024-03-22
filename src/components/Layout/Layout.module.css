@@ -1,8 +1,19 @@
-.container {
-  padding: 0 64px;
+/* .container { */
+/* padding: 0 64px; */
+/* } */
+
+.header {
+  padding: 12px 64px;
+  border-bottom: 1px solid red;
 }
 
 .main {
   display: flex;
   gap: 64px;
+  padding: 12px 64px;
+}
+
+.nav_list {
+  display: flex;
+  gap: 24px;
 }

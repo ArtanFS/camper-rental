@@ -6,18 +6,18 @@ import css from './Layout.module.css';
 const Layout = () => {
   return (
     <div className={css.container}>
-      <header>
+      <header className={css.header}>
         <div>
           <div>
             <nav>
-              <ul>
-                <li>
+              <ul className={css.nav_list}>
+                <li className={css.nav_list_item}>
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li>
+                <li className={css.nav_list_item}>
                   <NavLink to="/catalog">Catalog</NavLink>
                 </li>
-                <li>
+                <li className={css.nav_list_item}>
                   <NavLink to="/favorites">Favorites</NavLink>
                 </li>
               </ul>
