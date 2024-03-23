@@ -1,0 +1,28 @@
+.filter_location_form {
+  position: relative;
+}
+
+.filter_location_input {
+  width: 100%;
+  padding: 18px;
+  padding-left: 44px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--input-color);
+  line-height: 1.25;
+  color: inherit;
+}
+
+/* .filter_location_input:active {
+  border-color: transparent;
+} */
+
+.filter_location_icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 20px;
+  fill: var(--placeholder-color);
+}

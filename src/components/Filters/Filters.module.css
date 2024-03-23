@@ -2,3 +2,14 @@
   position: fixed;
   width: 360px;
 }
+
+.filter_location {
+  margin-bottom: 32px;
+}
+
+.filter_location_title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--placeholder-color);
+  margin-bottom: 8px;
+}

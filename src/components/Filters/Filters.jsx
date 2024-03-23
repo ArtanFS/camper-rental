@@ -6,8 +6,8 @@ import css from './Filters.module.css';
 const Filters = () => {
   return (
     <div className={css.filters_wrap}>
-      <div>
-        <h3>Location</h3>
+      <div className={css.filter_location}>
+        <h3 className={css.filter_location_title}>Location</h3>
         <LocationInput />
       </div>
       <div>
