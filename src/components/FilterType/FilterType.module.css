@@ -16,7 +16,7 @@
   gap: 10px;
 }
 
-.radio_item {
+.filter_item {
   max-width: 128px;
   height: 95px;
   display: flex;
@@ -29,7 +29,7 @@
   border: 1px solid var(--border-card-color);
 }
 
-.visually_hidden:checked + .radio_item {
+.visually_hidden:checked + .filter_item {
   border-color: var(--btn-color);
 }
 
@@ -37,13 +37,4 @@
   width: 40px;
   height: 28px;
   fill: var(--main-color);
-  /* margin: 0 auto;
-  margin-bottom: 5px; */
-}
-
-.filter_item_title {
-  font-weight: 500;
-  line-height: 1.25;
-  text-align: center;
-  color: inherit;
 }

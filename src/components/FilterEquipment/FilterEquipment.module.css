@@ -1,0 +1,47 @@
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.filter_item {
+  max-width: 115px;
+  min-width: 112px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 12px; */
+  border-radius: 10px;
+  border: 1px solid var(--border-card-color);
+  flex-grow: 1;
+}
+
+.filter_item_add {
+  flex-grow: unset;
+}
+
+.visually_hidden:checked + .filter_item {
+  border-color: var(--btn-color);
+}
+
+.filter_icon {
+  width: 40px;
+  height: 28px;
+  fill: var(--main-color);
+}

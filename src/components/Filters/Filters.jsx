@@ -14,7 +14,7 @@ const Filters = () => {
         <h2 className={css.filters_title}>Filters</h2>
         <div>
           <h3 className={css.filters_type_title}>Vehicle equipment</h3>
-          {/* <FilterEquipment /> */}
+          <FilterEquipment />
         </div>
         <div>
           <h3 className={css.filters_type_title}>Vehicle type</h3>

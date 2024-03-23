@@ -1,66 +1,98 @@
+import { Field, Form, Formik } from 'formik';
 import Icon from 'components/Icon/Icon';
 import css from './FilterEquipment.module.css';
+import Label from 'components/Label/Label';
+import classNames from 'classnames';
 
 const FilterEquipment = () => {
   // const dispatch = useDispatch();
 
   // const currentFilter = useFilter();
 
-  // const handleChangeFilter = e => {
-  // dispatch(addFilter(e.target.value));
-  // };
+  const handleChangeFilter = e => {
+    // dispatch(addFilter(e.target.value));
+  };
 
   return (
     <div className={css.filter_container}>
       <h2 className={css.title}>Filter equipment</h2>
 
       <div className={css.filter_wrapper}>
-        {/* <Formik
+        <Formik
           initialValues={{
-            filter: currentFilter,
+            checked: [],
           }}
-        > */}
-        {/* <Form className={css.filter} onChange={handleChangeFilter}> */}
-        <div role="checkbox" aria-checked className={css.checkbox}>
-          <h3 className={css.filter_title}>Label color</h3>
-
-          {/* <Field
-            value="alcove"
-            className={css.visually_hidden}
-            type="checkbox"
-            name="filter"
-            id="alcove"
-          /> */}
-          <label htmlFor="alcove" className={css.radio_item}>
-            {/* <div className={css.radio_btn}>Alcove</div> */}
-            <Icon className={css.filter_icon} id="alcove" />
-            <p>Alcove</p>
-          </label>
-          {/* <Field
-            value="fully-int"
-            className={css.visually_hidden}
-            type="radio"
-            name="filter"
-            id="fully-int"
-          /> */}
-          <label htmlFor="fully-int" className={css.radio_item}>
-            <Icon className={css.filter_icon} id="fully-int" />
-            <p>Fully-int</p>
-          </label>
-          {/* <Field
-            value="van"
-            className={css.visually_hidden}
-            type="radio"
-            name="filter"
-            id="van"
-          /> */}
-          <label htmlFor="van" className={css.radio_item}>
-            <Icon className={css.filter_icon} id="van" />
-            <p>Van</p>
-          </label>
-        </div>
-        {/* </Form> */}
-        {/* </Formik> */}
+        >
+          <Form className={css.filter} onChange={handleChangeFilter}>
+            <div role="checkbox" aria-checked className={css.checkbox}>
+              <Field
+                value="AC"
+                className={css.visually_hidden}
+                type="checkbox"
+                name="checked"
+                id="AC"
+              />
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="AC"
+                title="AC"
+              />
+              <Field
+                value="transmission"
+                className={css.visually_hidden}
+                type="checkbox"
+                name="checked"
+                id="transmission"
+              />
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="transmission"
+                title="Automatic"
+              />
+              <Field
+                value="kitchen"
+                className={css.visually_hidden}
+                type="checkbox"
+                name="checked"
+                id="kitchen"
+              />
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="kitchen"
+                title="Kitchen"
+              />
+              <Field
+                value="TV"
+                className={css.visually_hidden}
+                type="checkbox"
+                name="checked"
+                id="TV"
+              />
+              <Label
+                className={classNames(css.filter_item, css.filter_item_add)}
+                classNameIcon={css.filter_icon}
+                id="TV"
+                title="TV"
+              />
+              <Field
+                value="shower"
+                className={css.visually_hidden}
+                type="checkbox"
+                name="checked"
+                id="shower"
+              />
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="shower"
+                title="Shower/WC"
+              />
+            </div>
+          </Form>
+        </Formik>
       </div>
     </div>
   );

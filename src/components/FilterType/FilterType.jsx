@@ -2,6 +2,7 @@
 import Icon from 'components/Icon/Icon';
 import css from './FilterType.module.css';
 import { Field, Form, Formik } from 'formik';
+import Label from 'components/Label/Label';
 
 const FilterType = () => {
   // const dispatch = useDispatch();
@@ -29,12 +30,12 @@ const FilterType = () => {
                 name="filter"
                 id="van"
               />
-              <label htmlFor="van" className={css.radio_item}>
-                {/* <div className={css.radio_btn}> */}
-                <Icon className={css.filter_icon} id="alcove" />
-                <p className={css.filter_item_title}>Van</p>
-                {/* </div> */}
-              </label>
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="van"
+                title="Van"
+              />
               <Field
                 value="fully-int"
                 className={css.visually_hidden}
@@ -42,12 +43,12 @@ const FilterType = () => {
                 name="filter"
                 id="fully-int"
               />
-              <label htmlFor="fully-int" className={css.radio_item}>
-                {/* <div className={css.radio_btn}> */}
-                <Icon className={css.filter_icon} id="fully-int" />
-                <p className={css.filter_item_title}>Fully Integrated</p>
-                {/* </div> */}
-              </label>
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="fully-int"
+                title="Fully Integrated"
+              />
               <Field
                 value="alcove"
                 className={css.visually_hidden}
@@ -55,12 +56,12 @@ const FilterType = () => {
                 name="filter"
                 id="alcove"
               />
-              <label htmlFor="alcove" className={css.radio_item}>
-                {/* <div className={css.radio_btn}> */}
-                <Icon className={css.filter_icon} id="alcove" />
-                <p className={css.filter_item_title}>Alcove</p>
-                {/* </div> */}
-              </label>
+              <Label
+                className={css.filter_item}
+                classNameIcon={css.filter_icon}
+                id="alcove"
+                title="Alcove"
+              />
             </div>
           </Form>
         </Formik>

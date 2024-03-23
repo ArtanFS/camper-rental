@@ -16,7 +16,6 @@ const LocationInput = () => {
           name="location"
           placeholder="City"
           className={css.filter_location_input}
-          // autoFocus
           value={location}
           onChange={handlerInputValue}
         />
