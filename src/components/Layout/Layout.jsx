@@ -1,31 +1,15 @@
 import Loader from 'components/Loader/Loader';
 import { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-import classNames from 'classnames';
+import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
+import Header from 'components/Header/Header';
 
 const Layout = () => {
   return (
     <>
-      <header className={css.header}>
-        <div className={css.container}>
-          <nav>
-            <ul className={css.nav_list}>
-              <li className={css.nav_list_item}>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li className={css.nav_list_item}>
-                <NavLink to="/catalog">Catalog</NavLink>
-              </li>
-              <li className={css.nav_list_item}>
-                <NavLink to="/favorites">Favorites</NavLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
       <main className={css.main}>
-        <div className={classNames(css.container, css.main_container)}>
+        <div className={css.container}>
           <Suspense fallback={<Loader />}>
             <Outlet />
           </Suspense>
