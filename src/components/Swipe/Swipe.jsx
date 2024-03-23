@@ -19,7 +19,7 @@ const Swipe = () => {
       slidesPerView={1}
       navigation
       autoplay={{
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
       }}
       loop={true}

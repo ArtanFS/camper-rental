@@ -1,8 +1,9 @@
 import Swipe from 'components/Swipe/Swipe';
+import css from './HomePage.module.css'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className={css.wrapper}>
       <Swipe />
     </div>
   );
