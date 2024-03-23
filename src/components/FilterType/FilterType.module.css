@@ -1,0 +1,49 @@
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.radio {
+  display: flex;
+  gap: 10px;
+}
+
+.radio_item {
+  max-width: 128px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 29px;
+  border-radius: 10px;
+  border: 1px solid var(--border-card-color);
+}
+
+.visually_hidden:checked + .radio_item {
+  border-color: var(--btn-color);
+}
+
+.filter_icon {
+  width: 40px;
+  height: 28px;
+  fill: var(--main-color);
+  /* margin: 0 auto;
+  margin-bottom: 5px; */
+}
+
+.filter_item_title {
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  color: inherit;
+}

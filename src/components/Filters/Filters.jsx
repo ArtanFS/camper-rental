@@ -7,17 +7,17 @@ const Filters = () => {
   return (
     <div className={css.filters_wrap}>
       <div className={css.filter_location}>
-        <h3 className={css.filter_location_title}>Location</h3>
+        <h2 className={css.filter_location_title}>Location</h2>
         <LocationInput />
       </div>
       <div>
-        <h3>Filters</h3>
+        <h2 className={css.filters_title}>Filters</h2>
         <div>
-          <h2>Vehicle equipment</h2>
-          <FilterEquipment />
+          <h3 className={css.filters_type_title}>Vehicle equipment</h3>
+          {/* <FilterEquipment /> */}
         </div>
         <div>
-          <h2>Vehicle type</h2>
+          <h3 className={css.filters_type_title}>Vehicle type</h3>
           <FilterType />
         </div>
       </div>
