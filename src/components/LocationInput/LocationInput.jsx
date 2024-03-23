@@ -1,15 +1,16 @@
-// import { useState } from 'react';
-// import css from './LocationInput.module.css';
+import { useState } from 'react';
+import css from './LocationInput.module.css';
+import { Field, Form, Formik } from 'formik';
 
 const LocationInput = () => {
-  // const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState(null);
 
-  // const handlerInputValue = ({ target }) => setLocation(target.value);
+  const handlerInputValue = ({ target }) => setLocation(target.value);
 
   return (
     <div>
       LocInput
-      {/* <Formik>
+      <Formik>
         <Form>
           <Field
             type="text"
@@ -21,7 +22,7 @@ const LocationInput = () => {
             onChange={handlerInputValue}
           ></Field>
         </Form>
-      </Formik> */}
+      </Formik>
     </div>
   );
 };
