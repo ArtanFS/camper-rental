@@ -2,6 +2,9 @@ import Rating from 'components/Rating/Rating';
 import css from './CamperDetails.module.css';
 import Location from 'components/Location/Location';
 import Price from 'components/Price/Price';
+import { Link, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import Loader from 'components/Loader/Loader';
 
 const CamperDetails = ({ data }) => {
   return (
@@ -36,6 +39,19 @@ const CamperDetails = ({ data }) => {
           ))}
       </ul>
       <p className={css.card_description}>{data.description}</p>
+      <div>
+        <ul>
+          <li>
+            <Link to="features">Features</Link>
+          </li>
+          <li>
+            <Link to="reviews">Reviews</Link>
+          </li>
+        </ul>
+      </div>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
