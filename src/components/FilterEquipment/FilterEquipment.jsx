@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from 'formik';
-import Icon from 'components/Icon/Icon';
+// import Icon from 'components/Icon/Icon';
 import css from './FilterEquipment.module.css';
 import Label from 'components/Label/Label';
 import classNames from 'classnames';

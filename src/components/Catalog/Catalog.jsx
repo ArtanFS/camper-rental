@@ -1,18 +1,14 @@
 import CamperCard from 'components/CamperCard/CamperCard';
-import { useCampers } from 'hooks/useCampers';
+// import { useCampers } from 'hooks/useCampers';
 import css from './Catalog.module.css';
 import Button from 'components/Button/Button';
-import Modal from 'components/Modal/Modal';
-import { useState } from 'react';
+// import { useState } from 'react';
+import campers from '../../db/campers.json';
 
 const Catalog = ({ loadMore }) => {
   // const [isLoadMoreDisabled, setIsLoadMoreDisabled] = useState(false);
-  const [openDetailsModal, setOpenDetailsModal] = useState(false);
-  const campers = useCampers();
 
-  const openModal = () => {
-    setOpenDetailsModal(!openDetailsModal);
-  };
+  // const campers = useCampers();
 
   // const cards = campers.length;
 
@@ -32,15 +28,6 @@ const Catalog = ({ loadMore }) => {
         >
           Load more
         </Button>
-      )}
-      <Button className={css.loadmore_btn} onClick={openModal}>
-        Open modal
-      </Button>
-      {openDetailsModal && (
-        <Modal openModal={openModal}>
-          <p>Привіт!</p>
-          {/* <AddColumn closeModal={openModal} /> */}
-        </Modal>
       )}
     </section>
   );

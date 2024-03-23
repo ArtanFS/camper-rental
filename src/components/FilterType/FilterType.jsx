@@ -1,5 +1,5 @@
 // import { useDispatch } from 'react-redux';
-import Icon from 'components/Icon/Icon';
+// import Icon from 'components/Icon/Icon';
 import css from './FilterType.module.css';
 import { Field, Form, Formik } from 'formik';
 import Label from 'components/Label/Label';
