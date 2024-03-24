@@ -7,7 +7,7 @@ const FilterType = ({ setType }) => {
     <div className={css.filter_wrapper}>
       <div role="group" className={css.radio} onChange={setType}>
         <Field
-          value="panelTrack"
+          value="panelTruck"
           className={css.visually_hidden}
           type="radio"
           name="form"
