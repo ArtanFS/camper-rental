@@ -32,6 +32,8 @@ const Filters = () => {
     setFilterType(target.value);
   };
 
+  console.log(filterType);
+
   return (
     <Formik
       initialValues={{
