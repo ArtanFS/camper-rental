@@ -8,7 +8,7 @@ import Features from 'components/Features/Features';
 import Reviewes from 'components/Reviews/Reviews';
 
 const CamperDetails = ({ data }) => {
-  const [isShowFeatures, setIsShowFeatures] = useState(false);
+  const [isShowFeatures, setIsShowFeatures] = useState(true);
   const [isShowReviews, setIsShowReviews] = useState(false);
 
   const { _id, name, price, gallery, description } = data;
