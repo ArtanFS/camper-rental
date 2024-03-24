@@ -1,36 +1,69 @@
 import FilterEquipment from 'components/FilterEquipment/FilterEquipment';
 import FilterType from 'components/FilterType/FilterType';
-import LocationInput from 'components/LocationInput/LocationInput';
+import FilterLocation from 'components/FilterLocation/FilterLocation';
 import css from './Filters.module.css';
 import { Form, Formik } from 'formik';
+import Button from 'components/Button/Button';
+import { useState } from 'react';
 
 const Filters = () => {
+  const [filterLocation, setFilterLocation] = useState('');
+  const [filterEquipment, setFilterEquipment] = useState([]);
+  const [filterType, setFilterType] = useState('');
+
+  const handlerFilterLocation = ({ target }) => setFilterLocation(target.value);
+
+  const handlerFilterEquipment = ({ target }) => {
+    const arrIdx = filterEquipment.indexOf(target.value);
+    if (arrIdx !== -1) {
+      const arr = [
+        ...filterEquipment.slice(0, arrIdx),
+        ...filterEquipment.slice(arrIdx + 1),
+      ];
+      // filterEquipment.splice(arrIdx, 1);
+      setFilterEquipment(arr);
+    } else {
+      const arr = [...filterEquipment, target.value];
+      setFilterEquipment(arr);
+    }
+  };
+
+  const handlerFilterType = ({ target }) => {
+    setFilterType(target.value);
+  };
+
+  console.log(filterEquipment);
+
   return (
     <Formik
       initialValues={{
         options: [],
         form: '',
       }}
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
     >
       <Form className={css.filter_location_form}>
         <div className={css.filters_wrap}>
           <div className={css.filter_location}>
             <h2 className={css.filter_location_title}>Location</h2>
-            <LocationInput />
+            <FilterLocation
+              inputLocation={handlerFilterLocation}
+              value={filterLocation}
+            />
           </div>
           <div>
             <h2 className={css.filters_title}>Filters</h2>
             <div>
               <h3 className={css.filters_type_title}>Vehicle equipment</h3>
-              <FilterEquipment />
+              <FilterEquipment setEquipment={handlerFilterEquipment} />
             </div>
             <div>
               <h3 className={css.filters_type_title}>Vehicle type</h3>
-              <FilterType />
+              <FilterType setType={handlerFilterType} />
             </div>
           </div>
         </div>
+        <Button type="submit">Search</Button>
       </Form>
     </Formik>
   );
