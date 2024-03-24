@@ -29,9 +29,13 @@ const Swipe = () => {
         <div className={css.slide_wrap}>
           <img className={css.slide_img} src={camp1} alt="Our best camper" />
           <div className={css.slide_description}>
-            <h2>Your best choice</h2>
-            <p>We are expert in camper rental</p>
-            <NavLink to="/catalog">Rent camper</NavLink>
+            <h2 className={css.description_title}>Best choice</h2>
+            <p className={css.description_subtitle}>
+              We are expert in camper rental
+            </p>
+            <NavLink to="/catalog" className={css.navigate}>
+              Rent camper
+            </NavLink>
           </div>
         </div>
       </SwiperSlide>
@@ -39,9 +43,13 @@ const Swipe = () => {
         <div className={css.slide_wrap}>
           <img className={css.slide_img} src={camp2} alt="Our best camper" />
           <div className={css.slide_description}>
-            <h2>Best Journey</h2>
-            <p>We make your drive memorable</p>
-            <NavLink to="/catalog">Rent camper</NavLink>
+            <h2 className={css.description_title}>Best Journey</h2>
+            <p className={css.description_subtitle}>
+              We make your drive memorable
+            </p>
+            <NavLink to="/catalog" className={css.navigate}>
+              Rent camper
+            </NavLink>
           </div>
         </div>
       </SwiperSlide>
@@ -49,9 +57,13 @@ const Swipe = () => {
         <div className={css.slide_wrap}>
           <img className={css.slide_img} src={camp3} alt="Our best camper" />
           <div className={css.slide_description}>
-            <h2>Best Prices</h2>
-            <p>Enjoy your holidays with us</p>
-            <NavLink to="/catalog">Rent camper</NavLink>
+            <h2 className={css.description_title}>Best Prices</h2>
+            <p className={css.description_subtitle}>
+              Enjoy your holidays with us
+            </p>
+            <NavLink to="/catalog" className={css.navigate}>
+              Rent camper
+            </NavLink>
           </div>
         </div>
       </SwiperSlide>

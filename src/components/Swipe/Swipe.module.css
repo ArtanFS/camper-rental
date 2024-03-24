@@ -21,3 +21,33 @@
   color: var(--bg-color);
   text-align: center;
 }
+
+.description_title {
+  font-size: 84px;
+  color: var(--bg-color);
+  text-shadow: -5px -5px 5px var(--main-color), 5px -5px 5px var(--main-color),
+    5px 5px 5px var(--main-color), 10px 10px 10px var(--main-color),
+    15px 15px 10px var(--main-color);
+}
+
+.description_subtitle {
+  font-size: 36px;
+  color: var(--bg-color);
+  text-shadow: -5px -5px 5px var(--main-color), 5px -5px 5px var(--main-color),
+    5px 5px 5px var(--main-color), 10px 10px 10px var(--main-color),
+    15px 15px 10px var(--main-color);
+  margin-bottom: 24px;
+}
+
+.navigate {
+  font-size: 28px;
+  padding: 24px 36px;
+  color: inherit;
+  background-color: var(--btn-color);
+  border-radius: 100px;
+  text-shadow: 5px -5px 5px var(--main-color), 5px 5px 5px var(--main-color);
+}
+
+.navigate:hover {
+  background-color: var(--btn-active-color);
+}
