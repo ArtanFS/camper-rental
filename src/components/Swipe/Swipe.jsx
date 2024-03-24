@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import camp1 from '../../images/swipes/camp1.jpg';
-import camp2 from '../../images/swipes/camp2.jpg';
-import camp3 from '../../images/swipes/camp3.jpg';
+import camp1 from '../../images/swipes/camp1.webp';
+import camp2 from '../../images/swipes/camp2.webp';
+import camp3 from '../../images/swipes/camp3.webp';
 
 import css from './Swipe.module.css';
 
