@@ -62,7 +62,7 @@ const CamperDetails = ({ data }) => {
               </ul>
             </div>
           </div>
-          {isShowFeatures && <Features />}
+          {isShowFeatures && <Features data={data} />}
           {isShowReviews && <Reviewes />}
         </div>
       </div>
