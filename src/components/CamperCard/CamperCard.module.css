@@ -42,6 +42,10 @@
   transform: scale(1.2);
 }
 
+.favorite_active_icon {
+  fill: var(--btn-color);
+}
+
 .card_price_wrap {
   display: flex;
   gap: 12px;

@@ -11,6 +11,7 @@ import CamperDetails from 'components/CamperDetails/CamperDetails';
 import Rating from 'components/Rating/Rating';
 import CardImg from 'components/CardImg/CardImg';
 import css from './CamperCard.module.css';
+import classNames from 'classnames';
 
 const CamperCard = ({ data }) => {
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
@@ -58,7 +59,10 @@ const CamperCard = ({ data }) => {
                 <Price className={css.card_title} price={price} />
                 <Button onClick={toggleFavorite}>
                   <Icon
-                    className={css.favorite_icon}
+                    className={classNames(
+                      css.favorite_icon,
+                      isFavorite && css.favorite_active_icon
+                    )}
                     id={isFavorite ? 'heart_full' : 'heart'}
                   />
                 </Button>
