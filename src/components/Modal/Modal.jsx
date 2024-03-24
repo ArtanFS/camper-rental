@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
 import css from './Modal.module.css';
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -15,9 +16,11 @@ const Modal = ({ children, openModal }) => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
+    disableBodyScroll(document.body);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      clearAllBodyScrollLocks();
     };
   }, [openModal]);
 

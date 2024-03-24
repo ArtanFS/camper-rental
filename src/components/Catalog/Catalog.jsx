@@ -1,14 +1,14 @@
 import CamperCard from 'components/CamperCard/CamperCard';
-// import { useCampers } from 'hooks/useCampers';
+import { useCampers } from 'hooks/useCampers';
 import css from './Catalog.module.css';
 import Button from 'components/Button/Button';
 // import { useState } from 'react';
-import campers from '../../db/campers.json';
+// import campers from '../../db/campers.json';
 
 const Catalog = ({ loadMore }) => {
   // const [isLoadMoreDisabled, setIsLoadMoreDisabled] = useState(false);
 
-  // const campers = useCampers();
+  const campers = useCampers();
 
   // const cards = campers.length;
 
