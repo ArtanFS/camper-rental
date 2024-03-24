@@ -155,6 +155,10 @@ const campersSlice = createSlice({
         camper => camper._id === payload._id
       );
       if (favCamperIdx !== -1) state.favCampers.splice(favCamperIdx, 1);
+      // if (favCamperIdx !== -1)
+      //   state.favCampers = state.favCampers.filter(
+      //     ({ _id }) => _id !== payload._id
+      //   );
       else state.favCampers.push(payload);
     },
   },

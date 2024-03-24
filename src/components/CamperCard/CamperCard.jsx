@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useFavCampers } from 'hooks/useFavCampers';
 import { setFavCampers } from '../../redux/campers/campersSlice';
@@ -14,41 +14,65 @@ import css from './CamperCard.module.css';
 
 const CamperCard = ({ data }) => {
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
   const dispatch = useDispatch();
+
+  const {
+    _id,
+    gallery,
+    name,
+    price,
+    description,
+    adults,
+    transmission,
+    engine,
+    details,
+  } = data;
   const favCampers = useFavCampers();
+
+  useEffect(() => {
+    const favCampIdx = favCampers.findIndex(camper => camper._id === _id);
+    if (favCampIdx !== -1) setIsFavorite(true);
+    else setIsFavorite(false);
+  }, [favCampers, _id]);
 
   const toggleFavorite = () => {
     dispatch(setFavCampers(data));
   };
 
   const openModal = () => {
+    setIsFavorite(!isFavorite);
     setOpenDetailsModal(!openDetailsModal);
   };
 
   return (
     <>
       <li className={css.card_item}>
-        <CardImg src={data.gallery[0]} alt={'Camper ' + data.name} />
+        <CardImg src={gallery[0]} alt={'Camper ' + name} />
         <div className={css.card_info_wrap}>
           <div>
             <div className={css.card_title_wrap}>
-              <h2 className={css.card_title}>{data.name}</h2>
+              <h2 className={css.card_title}>{name}</h2>
               <div className={css.card_price_wrap}>
-                <Price className={css.card_title} price={data.price} />
+                <Price className={css.card_title} price={price} />
                 <Button onClick={toggleFavorite}>
-                  <Icon className={css.favorite_icon} id="heart" />
+                  <Icon
+                    className={css.favorite_icon}
+                    id={isFavorite ? 'heart_full' : 'heart'}
+                  />
                 </Button>
               </div>
             </div>
             <Rating data={data} />
           </div>
-          <p className={css.card_description}>{data.description}</p>
+          <p className={css.card_description}>{description}</p>
           <div className={css.card_option_wrap}>
-            <Option id="adults">{data.adults + ' adults'}</Option>
-            <Option id="transmission">{data.transmission}</Option>
-            <Option id="fuel">{data.engine}</Option>
+            <Option id="adults">{adults + ' adults'}</Option>
+            <Option id="transmission">{transmission}</Option>
+            <Option id="fuel">{engine}</Option>
             <Option id="kitchen">Kitchen</Option>
-            <Option id="bed">{data.details.beds + ' beds'}</Option>
+            <Option id="bed">{details.beds + ' beds'}</Option>
             <Option id="AC">AC</Option>
           </div>
           <div>
