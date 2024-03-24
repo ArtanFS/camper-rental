@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/campersrent/static/css/main.3d25bee5.css",
-    "main.js": "/campersrent/static/js/main.10279cb4.js",
+    "main.js": "/campersrent/static/js/main.632474ba.js",
     "static/css/862.90f894ae.chunk.css": "/campersrent/static/css/862.90f894ae.chunk.css",
-    "static/js/862.9d1b023d.chunk.js": "/campersrent/static/js/862.9d1b023d.chunk.js",
-    "static/css/56.9fcb1e8c.chunk.css": "/campersrent/static/css/56.9fcb1e8c.chunk.css",
-    "static/js/56.9c0f3012.chunk.js": "/campersrent/static/js/56.9c0f3012.chunk.js",
-    "static/js/879.6976558b.chunk.js": "/campersrent/static/js/879.6976558b.chunk.js",
+    "static/js/862.5d8dc2f9.chunk.js": "/campersrent/static/js/862.5d8dc2f9.chunk.js",
+    "static/css/624.3da89e02.chunk.css": "/campersrent/static/css/624.3da89e02.chunk.css",
+    "static/js/624.4b2c7f32.chunk.js": "/campersrent/static/js/624.4b2c7f32.chunk.js",
+    "static/js/879.ff229b16.chunk.js": "/campersrent/static/js/879.ff229b16.chunk.js",
     "static/js/48.92e679f9.chunk.js": "/campersrent/static/js/48.92e679f9.chunk.js",
     "static/js/969.0aacf678.chunk.js": "/campersrent/static/js/969.0aacf678.chunk.js",
     "static/media/Inter-SemiBold.ttf": "/campersrent/static/media/Inter-SemiBold.6058d3da655fb35169c2.ttf",
@@ -18,17 +18,17 @@
     "static/media/camp3.jpg": "/campersrent/static/media/camp3.8b5fb8d1e0fa25ce7c2b.jpg",
     "index.html": "/campersrent/index.html",
     "main.3d25bee5.css.map": "/campersrent/static/css/main.3d25bee5.css.map",
-    "main.10279cb4.js.map": "/campersrent/static/js/main.10279cb4.js.map",
+    "main.632474ba.js.map": "/campersrent/static/js/main.632474ba.js.map",
     "862.90f894ae.chunk.css.map": "/campersrent/static/css/862.90f894ae.chunk.css.map",
-    "862.9d1b023d.chunk.js.map": "/campersrent/static/js/862.9d1b023d.chunk.js.map",
-    "56.9fcb1e8c.chunk.css.map": "/campersrent/static/css/56.9fcb1e8c.chunk.css.map",
-    "56.9c0f3012.chunk.js.map": "/campersrent/static/js/56.9c0f3012.chunk.js.map",
-    "879.6976558b.chunk.js.map": "/campersrent/static/js/879.6976558b.chunk.js.map",
+    "862.5d8dc2f9.chunk.js.map": "/campersrent/static/js/862.5d8dc2f9.chunk.js.map",
+    "624.3da89e02.chunk.css.map": "/campersrent/static/css/624.3da89e02.chunk.css.map",
+    "624.4b2c7f32.chunk.js.map": "/campersrent/static/js/624.4b2c7f32.chunk.js.map",
+    "879.ff229b16.chunk.js.map": "/campersrent/static/js/879.ff229b16.chunk.js.map",
     "48.92e679f9.chunk.js.map": "/campersrent/static/js/48.92e679f9.chunk.js.map",
     "969.0aacf678.chunk.js.map": "/campersrent/static/js/969.0aacf678.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3d25bee5.css",
-    "static/js/main.10279cb4.js"
+    "static/js/main.632474ba.js"
   ]
 }
