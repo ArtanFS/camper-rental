@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCampers } from './campersApi';
+import { getCampers, getCampersByPage } from './campersApi';
 // import {
 //   getColumns,
 //   addColumn,
@@ -23,30 +23,31 @@ const handleRejected = (state, { payload }) => {
   state.error = payload;
 };
 
-// const handleFulfilledGetColumns = (state, { payload }) => {
-//   state.isLoading = false;
-//   state.error = null;
-//   state.shownBoard.columns = payload;
-// };
-
 const handleFulfilledGetCampers = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-
-  if (payload.length) {
-    if (!state.campers.length) state.campers.push(...payload);
-    else if (state.campers[0]._id !== payload[0]._id)
-      state.campers.push(...payload);
-  }
-
-  // if (payload.length && payload[0]._id) {
-  //   const columnIdx = state.shownBoard.columns.findIndex(
-  //     col => col._id === payload[0].columnId
-  //   );
-  //   if (!state.shownBoard.columns[columnIdx].cards.length)
-  //     state.shownBoard.columns[columnIdx].cards.push(...payload);
-  // }
+  state.campers = payload;
 };
+
+const handleFulfilledGetCampersByPage = (state, { payload }) => {
+  state.isLoading = false;
+  state.error = null;
+  state.shownCampers.push(...payload);
+};
+
+// if (payload.length) {
+//   if (!state.campers.length) state.campers.push(...payload);
+//   else if (state.campers[0]._id !== payload[0]._id)
+//     state.campers.push(...payload);
+// }
+
+// if (payload.length && payload[0]._id) {
+//   const columnIdx = state.shownBoard.columns.findIndex(
+//     col => col._id === payload[0].columnId
+//   );
+//   if (!state.shownBoard.columns[columnIdx].cards.length)
+//     state.shownBoard.columns[columnIdx].cards.push(...payload);
+// }
 
 // const handleFulfilledAddColumn = (state, { payload }) => {
 //   state.isLoading = false;
@@ -130,6 +131,7 @@ const handleFulfilledGetCampers = (state, { payload }) => {
 
 const initialState = {
   campers: [],
+  shownCampers: [],
   favCampers: [],
   isLoading: false,
   error: null,
@@ -139,19 +141,22 @@ const campersSlice = createSlice({
   name: 'campers',
   initialState,
 
-  //   reducers: {
-  //     showFavCampers(state) {
-  //       state.shownBoard = {
-  //         columns: [],
-  //       };
-  //     },
-  //     setShowBoard(state, action) {
-  //       state.shownBoard = {
-  //         ...action.payload,
-  //         columns: [],
-  //       };
-  //     },
-  //   },
+  reducers: {
+    // showFavCampers(state) {
+    //   state.shownBoard = {
+    //     columns: [],
+    //   };
+    // },
+    deleteShownCampers(state) {
+      state.shownCampers = [];
+    },
+    // setShowBoard(state, action) {
+    //   state.shownBoard = {
+    //     ...action.payload,
+    //     columns: [],
+    //   };
+    // },
+  },
 
   extraReducers: builder =>
     builder
@@ -160,7 +165,7 @@ const campersSlice = createSlice({
       //   .addCase(transportCard.fulfilled, handleFulfilledTransportCard)
       //   .addCase(deleteCard.fulfilled, handleFulfilledDeleteCard)
       .addCase(getCampers.fulfilled, handleFulfilledGetCampers)
-      //   .addCase(fetchCards.fulfilled, handleFulfilledGetCards)
+      .addCase(getCampersByPage.fulfilled, handleFulfilledGetCampersByPage)
       //   .addCase(addColumn.fulfilled, handleFulfilledAddColumn)
       //   .addCase(deleteColumn.fulfilled, handleFulfilledDeleteColumn)
       //   .addCase(updateColumnById.fulfilled, handleFulfilledUpdateColumnById)
@@ -169,4 +174,4 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
-// export const { showBoard, setShowBoard } = columnsSlice.actions;
+export const { deleteShownCampers } = campersSlice.actions;

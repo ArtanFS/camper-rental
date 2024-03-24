@@ -2,7 +2,7 @@ import Catalog from 'components/Catalog/Catalog';
 import Filters from 'components/Filters/Filters';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getCampers } from '../redux/campers/campersApi';
+import { getCampers, getCampersByPage } from '../redux/campers/campersApi';
 // import { useCampers } from 'hooks/useCampers';
 
 const CatalogPage = () => {
@@ -12,7 +12,11 @@ const CatalogPage = () => {
   // const campers = useCampers();
 
   useEffect(() => {
-    dispatch(getCampers(page));
+    dispatch(getCampers());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getCampersByPage(page));
   }, [dispatch, page]);
 
   const getMoreCampers = () => {
