@@ -21,16 +21,18 @@ const CamperCard = ({ data }) => {
       <li className={css.card_item}>
         <CardImg src={data.gallery[0]} alt={'Camper ' + data.name} />
         <div className={css.card_info_wrap}>
-          <div className={css.card_title_wrap}>
-            <h2 className={css.card_title}>{data.name}</h2>
-            <div className={css.card_price_wrap}>
-              <Price className={css.card_title} price={data.price} />
-              <Button>
-                <Icon className={css.favorite_icon} id="heart" />
-              </Button>
+          <div>
+            <div className={css.card_title_wrap}>
+              <h2 className={css.card_title}>{data.name}</h2>
+              <div className={css.card_price_wrap}>
+                <Price className={css.card_title} price={data.price} />
+                <Button>
+                  <Icon className={css.favorite_icon} id="heart" />
+                </Button>
+              </div>
             </div>
+            <Rating data={data} />
           </div>
-          <Rating data={data} />
           <p className={css.card_description}>{data.description}</p>
           <div className={css.card_option_wrap}>
             <Option id="adults">{data.adults + ' adults'}</Option>
@@ -40,9 +42,11 @@ const CamperCard = ({ data }) => {
             <Option id="bed">{data.details.beds + ' beds'}</Option>
             <Option id="AC">AC</Option>
           </div>
-          <Button className={css.card_info_btn} onClick={openModal}>
-            Show more
-          </Button>
+          <div>
+            <Button className={css.card_info_btn} onClick={openModal}>
+              Show more
+            </Button>
+          </div>
         </div>
       </li>
       {openDetailsModal && (

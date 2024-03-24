@@ -7,69 +7,32 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.25;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .card_rating_wrap {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+  margin-top: 10px;
   margin-bottom: 16px;
-}
-
-.card_rating {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  text-decoration-line: underline;
-}
-
-.card_rating_icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--rating-color);
-}
-
-.card_location {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.card_location_icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--main-color);
 }
 
 .card_img_wrap {
   display: flex;
   gap: 16px;
-}
-
-.card_img_item {
-  width: 290px;
-  height: 310px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card_img {
-  object-fit: cover;
+  margin-bottom: 24px;
 }
 
 .card_description {
-  /* width: 525px; */
-  /* overflow: hidden; */
-  /* white-space: nowrap; */
-  /* text-overflow: ellipsis; */
   color: var(--text-color);
   text-align: justify;
-  /* margin-bottom: 24px; */
+  margin-bottom: 44px;
 }
 
 .scroll_container_wrap {
   width: 926px;
   height: 506px;
+  margin-top: 24px;
 }
 
 .scroll_container {
@@ -82,29 +45,10 @@
   width: 8px;
 }
 
-/* .scroll_container::-webkit-scrollbar-track {
-  background-color: var(--main-color);
-  border-radius: 4px;
-} */
-
 .scroll_container::-webkit-scrollbar-thumb {
   background-color: var(--scroll-color);
   border-radius: 4px;
 }
-
-/* .scroll_container::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scroll-color);
-  opacity: 1;
-} */
-
-/* .card_create_btn:hover {
-  background-color: var(--accent-color-focused);
-  transition: background-color 0.5s ease-in-out;
-}
-.card_create_btn:focus {
-  background-color: var(--accent-color-focused);
-  transition: background-color 0.5s ease-in-out;
-} */
 
 .card_info {
   width: 902px;
@@ -114,6 +58,7 @@
 .info_list {
   display: flex;
   gap: 40px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--border-card-color);
 }
 

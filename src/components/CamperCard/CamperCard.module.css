@@ -11,6 +11,9 @@
 .card_info_wrap {
   width: 526px;
   height: 310px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .card_title_wrap {
@@ -50,14 +53,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   color: var(--text-color);
-  margin-bottom: 24px;
 }
 
 .card_option_wrap {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
 }
 
 .card_info_btn {
