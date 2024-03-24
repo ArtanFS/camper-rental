@@ -1,0 +1,25 @@
+.wrapper {
+  width: 902px;
+  height: 576px;
+}
+
+.wrapper_active {
+  display: block;
+  position: relative;
+}
+
+.wrapper_active::before {
+  content: '';
+  position: absolute;
+  left: 125px;
+  top: 0;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 81px;
+  border-radius: 2px;
+  background-color: var(--btn-color);
+}
+
+.reviews_wrap {
+  padding-top: 44px;
+}

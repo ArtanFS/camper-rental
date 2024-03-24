@@ -43,7 +43,6 @@ const CamperCard = ({ data }) => {
   };
 
   const openModal = () => {
-    setIsFavorite(!isFavorite);
     setOpenDetailsModal(!openDetailsModal);
   };
 
