@@ -41,7 +41,6 @@ const Filters = () => {
       // onSubmit={handleSubmit}
     >
       <Form className={css.filters_form}>
-        {/* <div className={css.filters_wrap}> */}
         <div>
           <h2 className={css.filter_location_title}>Location</h2>
           <FilterLocation
@@ -58,7 +57,6 @@ const Filters = () => {
           <h3 className={css.filters_type_title}>Vehicle type</h3>
           <FilterType setType={handlerFilterType} />
         </div>
-        {/* </div> */}
         <div>
           <Button type="submit" className={css.filter_btn}>
             Search

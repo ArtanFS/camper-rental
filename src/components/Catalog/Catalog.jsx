@@ -1,12 +1,12 @@
-// import { useShownCampers } from 'hooks/useShownCampers';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useShownCampers } from 'hooks/useShownCampers';
+import { useCampers } from 'hooks/useCampers';
+import { getCampersByPage } from '../../redux/campers/campersApi';
 import Button from 'components/Button/Button';
 import CamperCard from 'components/CamperCard/CamperCard';
 import css from './Catalog.module.css';
-import { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { getCampersByPage } from '../../redux/campers/campersApi';
-import campers from '../../db/campers.json';
-import { useCampers } from 'hooks/useCampers';
+// import campers from '../../db/campers.json';
 // import allCampers from '../../db/campers.json';
 
 const Catalog = () => {
@@ -14,17 +14,16 @@ const Catalog = () => {
   const [isLoadMore, setIisLoadMore] = useState(true);
 
   const dispatch = useDispatch();
-  // const campers = useShownCampers();
   const allCampers = useCampers();
+  const campers = useShownCampers();
 
   useEffect(() => {
     dispatch(getCampersByPage(page));
   }, [dispatch, page]);
 
-  // if (page > allCampers.length / 4) isLoadMore = false;
-
   useEffect(() => {
     if (page > allCampers.length / 4) setIisLoadMore(false);
+    else setIisLoadMore(true);
   }, [page, allCampers]);
 
   const getMoreCampers = () => {
