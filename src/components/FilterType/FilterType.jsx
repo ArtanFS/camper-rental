@@ -18,7 +18,7 @@ const FilterType = () => {
       <div className={css.filter_wrapper}>
         <Formik
           initialValues={{
-            filter: '',
+            form: '',
           }}
         >
           <Form className={css.filter} onChange={handleChangeFilter}>
@@ -27,7 +27,7 @@ const FilterType = () => {
                 value="van"
                 className={css.visually_hidden}
                 type="radio"
-                name="filter"
+                name="form"
                 id="van"
               />
               <Label
@@ -40,7 +40,7 @@ const FilterType = () => {
                 value="fully-int"
                 className={css.visually_hidden}
                 type="radio"
-                name="filter"
+                name="form"
                 id="fully-int"
               />
               <Label
@@ -53,7 +53,7 @@ const FilterType = () => {
                 value="alcove"
                 className={css.visually_hidden}
                 type="radio"
-                name="filter"
+                name="form"
                 id="alcove"
               />
               <Label

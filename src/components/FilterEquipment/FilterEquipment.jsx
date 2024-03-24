@@ -20,7 +20,7 @@ const FilterEquipment = () => {
       <div className={css.filter_wrapper}>
         <Formik
           initialValues={{
-            checked: [],
+            options: [],
           }}
         >
           <Form className={css.filter} onChange={handleChangeFilter}>
@@ -29,7 +29,7 @@ const FilterEquipment = () => {
                 value="AC"
                 className={css.visually_hidden}
                 type="checkbox"
-                name="checked"
+                name="options"
                 id="AC"
               />
               <Label
@@ -42,7 +42,7 @@ const FilterEquipment = () => {
                 value="transmission"
                 className={css.visually_hidden}
                 type="checkbox"
-                name="checked"
+                name="options"
                 id="transmission"
               />
               <Label
@@ -55,7 +55,7 @@ const FilterEquipment = () => {
                 value="kitchen"
                 className={css.visually_hidden}
                 type="checkbox"
-                name="checked"
+                name="options"
                 id="kitchen"
               />
               <Label
@@ -68,7 +68,7 @@ const FilterEquipment = () => {
                 value="TV"
                 className={css.visually_hidden}
                 type="checkbox"
-                name="checked"
+                name="options"
                 id="TV"
               />
               <Label
@@ -81,7 +81,7 @@ const FilterEquipment = () => {
                 value="shower"
                 className={css.visually_hidden}
                 type="checkbox"
-                name="checked"
+                name="options"
                 id="shower"
               />
               <Label

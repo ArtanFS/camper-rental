@@ -4,16 +4,16 @@ import { Field, Form, Formik } from 'formik';
 import Icon from 'components/Icon/Icon';
 
 const LocationInput = () => {
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState('');
 
   const handlerInputValue = ({ target }) => setLocation(target.value);
 
   return (
-    <Formik>
+    <Formik initialValues={{ city: '' }}>
       <Form className={css.filter_location_form}>
         <Field
           type="text"
-          name="location"
+          name="city"
           placeholder="City"
           className={css.filter_location_input}
           value={location}
