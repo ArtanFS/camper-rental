@@ -36,13 +36,11 @@ const campersSlice = createSlice({
   initialState,
 
   reducers: {
-    // showFavCampers(state) {
-    //   state.shownBoard = {
-    //     columns: [],
-    //   };
-    // },
     deleteShownCampers(state) {
       state.shownCampers = [];
+    },
+    deleteFilteredCampers(state) {
+      state.filteredCampers = [];
     },
     setFavCampers(state, { payload }) {
       const favCamperIdx = state.favCampers.findIndex(
@@ -65,5 +63,9 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
-export const { deleteShownCampers, setFavCampers, setFilteredCampers } =
-  campersSlice.actions;
+export const {
+  deleteShownCampers,
+  deleteFilteredCampers,
+  setFavCampers,
+  setFilteredCampers,
+} = campersSlice.actions;

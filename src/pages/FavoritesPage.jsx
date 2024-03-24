@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteShownCampers } from '../redux/campers/campersSlice';
+import {
+  deleteFilteredCampers,
+  deleteShownCampers,
+} from '../redux/campers/campersSlice';
 import FavCampers from 'components/FavCampers/FavCampers';
 
 const FavoritesPage = () => {
@@ -8,6 +11,7 @@ const FavoritesPage = () => {
 
   useEffect(() => {
     dispatch(deleteShownCampers());
+    dispatch(deleteFilteredCampers());
   }, [dispatch]);
 
   return (

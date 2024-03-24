@@ -14,8 +14,8 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
 
   const campers = useShownCampers();
-  const filteredCampers = useFilteredCampers();
   const allCampers = useCampers();
+  const filteredCampers = useFilteredCampers();
 
   useEffect(() => {
     dispatch(getCampers());
@@ -34,13 +34,17 @@ const CatalogPage = () => {
     setPage(prev => prev + 1);
   };
 
+  const data = filteredCampers.length > 0 ? filteredCampers : campers;
+  const filtered = filteredCampers.length > 0 ? false : true;
+
   return (
     <>
       <Filters />
       <Catalog
-        campers={campers}
+        campers={data}
         onClick={getMoreCampers}
         isLoadMore={isLoadMore}
+        filtered={filtered}
       />
     </>
   );
