@@ -114,9 +114,6 @@ button {
   height: 100%;
 }
 
-/* address {
-  font-style: normal;
-} */
 a.active {
-  color: red;
+  color: var(--btn-color);
 }

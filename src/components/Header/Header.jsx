@@ -7,14 +7,20 @@ const Header = () => {
       <div className={css.container}>
         <nav>
           <ul className={css.nav_list}>
-            <li className={css.nav_list_item}>
-              <NavLink to="/">Home</NavLink>
+            <li>
+              <NavLink to="/" className={css.nav_list_item}>
+                Home
+              </NavLink>
             </li>
-            <li className={css.nav_list_item}>
-              <NavLink to="/catalog">Catalog</NavLink>
+            <li>
+              <NavLink to="/catalog" className={css.nav_list_item}>
+                Catalog
+              </NavLink>
             </li>
-            <li className={css.nav_list_item}>
-              <NavLink to="/favorites">Favorites</NavLink>
+            <li>
+              <NavLink to="/favorites" className={css.nav_list_item}>
+                Favorites
+              </NavLink>
             </li>
           </ul>
         </nav>
