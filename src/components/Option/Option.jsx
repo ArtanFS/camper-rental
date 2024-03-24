@@ -1,9 +1,10 @@
 import Icon from 'components/Icon/Icon';
+import css from './Option.module.css';
 
 const Option = ({ className, classNameIcon, id, children }) => {
   return (
-    <div className={className}>
-      <Icon className={classNameIcon} id={id} />
+    <div className={css.option}>
+      <Icon className={css.option_icon} id={id} />
       {children}
     </div>
   );

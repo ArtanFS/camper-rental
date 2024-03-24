@@ -1,0 +1,10 @@
+.img_wrap {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+}

@@ -8,17 +8,6 @@
   border: 1px solid var(--border-card-color);
 }
 
-.card_img_wrap {
-  width: 290px;
-  height: 310px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.card_img {
-  object-fit: cover;
-}
-
 .card_info_wrap {
   width: 526px;
   height: 310px;
@@ -35,6 +24,9 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.25;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .favorite_icon {
@@ -52,38 +44,6 @@
   gap: 12px;
 }
 
-.card_rating_wrap {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.card_rating {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  text-decoration-line: underline;
-}
-
-.card_rating_icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--rating-color);
-}
-
-.card_location {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.card_location_icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--main-color);
-}
-
 .card_description {
   width: 525px;
   overflow: hidden;
@@ -98,25 +58,6 @@
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 24px;
-}
-
-.card_option {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 100px;
-  background: var(--features-color);
-  font-weight: 500;
-  line-height: 1.25;
-  text-transform: capitalize;
-}
-
-.card_option_icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--main-color);
 }
 
 .card_info_btn {

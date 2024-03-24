@@ -1,0 +1,31 @@
+.rating_wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  text-decoration-line: underline;
+}
+
+.rating_icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating-color);
+}
+
+.location {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.location_icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--main-color);
+}

@@ -1,0 +1,18 @@
+.option {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: var(--features-color);
+  font-weight: 500;
+  line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.option_icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-color);
+}
