@@ -1,21 +1,11 @@
-import CamperCard from 'components/CamperCard/CamperCard';
-import { useCampers } from 'hooks/useCampers';
-import css from './Catalog.module.css';
-import Button from 'components/Button/Button';
 import { useShownCampers } from 'hooks/useShownCampers';
-// import { useState } from 'react';
+import Button from 'components/Button/Button';
+import CamperCard from 'components/CamperCard/CamperCard';
+import css from './Catalog.module.css';
 // import campers from '../../db/campers.json';
 
-const Catalog = ({ loadMore }) => {
-  // const [isLoadMoreDisabled, setIsLoadMoreDisabled] = useState(false);
-
+const Catalog = ({ loadMore, isLoadMore }) => {
   const campers = useShownCampers();
-
-  console.log(campers);
-
-  // const cards = campers.length;
-
-  // if (!Number.isInteger(cards / 4)) console.log(isLoadMoreDisabled);
 
   return (
     <section className={css.catalog_section}>
@@ -27,9 +17,9 @@ const Catalog = ({ loadMore }) => {
         <Button
           className={css.loadmore_btn}
           onClick={loadMore}
-          // disabled={isLoadMoreDisabled}
+          disabled={!isLoadMore}
         >
-          Load more
+          {isLoadMore ? 'Load more' : 'No more campers'}
         </Button>
       )}
     </section>

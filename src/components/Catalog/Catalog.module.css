@@ -20,3 +20,8 @@
   line-height: 1.5;
   margin: 0 auto;
 }
+
+.loadmore_btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
