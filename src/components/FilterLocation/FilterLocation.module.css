@@ -1,8 +1,8 @@
-.filter_location_form {
+.location_input_wrap {
   position: relative;
 }
 
-.filter_location_input {
+.location_input {
   width: 100%;
   padding: 18px;
   padding-left: 44px;
@@ -13,11 +13,7 @@
   color: inherit;
 }
 
-/* .filter_location_input:active {
-  border-color: transparent;
-} */
-
-.filter_location_icon {
+.location_icon {
   position: absolute;
   left: 18px;
   top: 50%;
@@ -25,4 +21,8 @@
   width: 18px;
   height: 20px;
   fill: var(--placeholder-color);
+}
+
+.location_input:focus + .location_icon {
+  fill: inherit;
 }

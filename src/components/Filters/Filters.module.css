@@ -1,10 +1,9 @@
-.filters_wrap {
+.filters_form {
   position: fixed;
   width: 360px;
-}
-
-.filter_location {
-  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .filter_location_title {
@@ -26,4 +25,18 @@
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 24px;
+}
+
+.filter_btn {
+  padding: 16px 60px;
+  border-radius: 200px;
+  background-color: var(--btn-color);
+  color: var(--bg-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+}
+
+.filter_btn:hover {
+  background-color: var(--btn-active-color);
 }

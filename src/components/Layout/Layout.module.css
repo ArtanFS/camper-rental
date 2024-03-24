@@ -1,7 +1,7 @@
 .container {
   max-width: 1440px;
   width: 100%;
-  padding: 12px 64px;
+  padding: 24px 64px;
   display: flex;
   gap: 64px;
 }

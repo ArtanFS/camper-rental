@@ -4,17 +4,17 @@ import css from './FilterLocation.module.css';
 
 const FilterLocation = ({ inputLocation, value }) => {
   return (
-    <>
+    <div className={css.location_input_wrap}>
       <Field
         type="text"
         name="city"
         placeholder="City"
-        className={css.filter_location_input}
+        className={css.location_input}
         value={value}
         onChange={inputLocation}
       />
-      <Icon className={css.filter_location_icon} id="locate" />
-    </>
+      <Icon className={css.location_icon} id="locate" />
+    </div>
   );
 };
 

@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+.filter_wrapper {
+  padding-top: 24px;
+  border-top: 1px solid var(--stripe-color);
+}
+
 .checkbox {
   display: flex;
   flex-wrap: wrap;

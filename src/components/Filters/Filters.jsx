@@ -32,8 +32,6 @@ const Filters = () => {
     setFilterType(target.value);
   };
 
-  console.log(filterEquipment);
-
   return (
     <Formik
       initialValues={{
@@ -42,28 +40,30 @@ const Filters = () => {
       }}
       // onSubmit={handleSubmit}
     >
-      <Form className={css.filter_location_form}>
-        <div className={css.filters_wrap}>
-          <div className={css.filter_location}>
-            <h2 className={css.filter_location_title}>Location</h2>
-            <FilterLocation
-              inputLocation={handlerFilterLocation}
-              value={filterLocation}
-            />
-          </div>
-          <div>
-            <h2 className={css.filters_title}>Filters</h2>
-            <div>
-              <h3 className={css.filters_type_title}>Vehicle equipment</h3>
-              <FilterEquipment setEquipment={handlerFilterEquipment} />
-            </div>
-            <div>
-              <h3 className={css.filters_type_title}>Vehicle type</h3>
-              <FilterType setType={handlerFilterType} />
-            </div>
-          </div>
+      <Form className={css.filters_form}>
+        {/* <div className={css.filters_wrap}> */}
+        <div>
+          <h2 className={css.filter_location_title}>Location</h2>
+          <FilterLocation
+            inputLocation={handlerFilterLocation}
+            value={filterLocation}
+          />
         </div>
-        <Button type="submit">Search</Button>
+        <div>
+          <h2 className={css.filters_title}>Filters</h2>
+          <h3 className={css.filters_type_title}>Vehicle equipment</h3>
+          <FilterEquipment setEquipment={handlerFilterEquipment} />
+        </div>
+        <div>
+          <h3 className={css.filters_type_title}>Vehicle type</h3>
+          <FilterType setType={handlerFilterType} />
+        </div>
+        {/* </div> */}
+        <div>
+          <Button type="submit" className={css.filter_btn}>
+            Search
+          </Button>
+        </div>
       </Form>
     </Formik>
   );
