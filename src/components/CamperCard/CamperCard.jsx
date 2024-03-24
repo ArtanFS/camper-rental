@@ -1,16 +1,25 @@
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useFavCampers } from 'hooks/useFavCampers';
+import { setFavCampers } from '../../redux/campers/campersSlice';
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
 import Option from 'components/Option/Option';
 import Price from 'components/Price/Price';
-import css from './CamperCard.module.css';
 import Modal from 'components/Modal/Modal';
-import { useState } from 'react';
 import CamperDetails from 'components/CamperDetails/CamperDetails';
-import CardImg from 'components/CardImg/CardImg';
 import Rating from 'components/Rating/Rating';
+import CardImg from 'components/CardImg/CardImg';
+import css from './CamperCard.module.css';
 
 const CamperCard = ({ data }) => {
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
+  const dispatch = useDispatch();
+  const favCampers = useFavCampers();
+
+  const toggleFavorite = () => {
+    dispatch(setFavCampers(data));
+  };
 
   const openModal = () => {
     setOpenDetailsModal(!openDetailsModal);
@@ -26,7 +35,7 @@ const CamperCard = ({ data }) => {
               <h2 className={css.card_title}>{data.name}</h2>
               <div className={css.card_price_wrap}>
                 <Price className={css.card_title} price={data.price} />
-                <Button>
+                <Button onClick={toggleFavorite}>
                   <Icon className={css.favorite_icon} id="heart" />
                 </Button>
               </div>

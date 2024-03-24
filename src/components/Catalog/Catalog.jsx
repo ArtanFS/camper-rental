@@ -1,11 +1,11 @@
-import { useShownCampers } from 'hooks/useShownCampers';
+// import { useShownCampers } from 'hooks/useShownCampers';
 import Button from 'components/Button/Button';
 import CamperCard from 'components/CamperCard/CamperCard';
 import css from './Catalog.module.css';
-// import campers from '../../db/campers.json';
+import campers from '../../db/campers.json';
 
 const Catalog = ({ loadMore, isLoadMore }) => {
-  const campers = useShownCampers();
+  // const campers = useShownCampers();
 
   return (
     <section className={css.catalog_section}>

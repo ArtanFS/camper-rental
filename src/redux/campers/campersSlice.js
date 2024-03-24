@@ -150,12 +150,13 @@ const campersSlice = createSlice({
     deleteShownCampers(state) {
       state.shownCampers = [];
     },
-    // setShowBoard(state, action) {
-    //   state.shownBoard = {
-    //     ...action.payload,
-    //     columns: [],
-    //   };
-    // },
+    setFavCampers(state, { payload }) {
+      const favCamperIdx = state.favCampers.findIndex(
+        camper => camper._id === payload._id
+      );
+      if (favCamperIdx !== -1) state.favCampers.splice(favCamperIdx, 1);
+      else state.favCampers.push(payload);
+    },
   },
 
   extraReducers: builder =>
@@ -174,4 +175,4 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
-export const { deleteShownCampers } = campersSlice.actions;
+export const { deleteShownCampers, setFavCampers } = campersSlice.actions;
