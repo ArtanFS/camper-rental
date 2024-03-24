@@ -9,19 +9,17 @@ const LocationInput = () => {
   const handlerInputValue = ({ target }) => setLocation(target.value);
 
   return (
-    <Formik initialValues={{ city: '' }}>
-      <Form className={css.filter_location_form}>
-        <Field
-          type="text"
-          name="city"
-          placeholder="City"
-          className={css.filter_location_input}
-          value={location}
-          onChange={handlerInputValue}
-        />
-        <Icon className={css.filter_location_icon} id="locate" />
-      </Form>
-    </Formik>
+    <>
+      <Field
+        type="text"
+        name="city"
+        placeholder="City"
+        className={css.filter_location_input}
+        value={location}
+        onChange={handlerInputValue}
+      />
+      <Icon className={css.filter_location_icon} id="locate" />
+    </>
   );
 };
 

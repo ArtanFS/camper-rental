@@ -24,7 +24,7 @@ const FilterType = () => {
           <Form className={css.filter} onChange={handleChangeFilter}>
             <div role="group" className={css.radio}>
               <Field
-                value="van"
+                value="panelTrack"
                 className={css.visually_hidden}
                 type="radio"
                 name="form"
@@ -37,7 +37,7 @@ const FilterType = () => {
                 title="Van"
               />
               <Field
-                value="fully-int"
+                value="fullyIntegrated"
                 className={css.visually_hidden}
                 type="radio"
                 name="form"
