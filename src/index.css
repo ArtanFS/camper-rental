@@ -117,3 +117,10 @@ button {
 a.active {
   color: var(--btn-color);
 }
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}

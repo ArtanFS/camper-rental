@@ -26,3 +26,30 @@
 .location_input:focus + .location_icon {
   fill: inherit;
 }
+
+.list_wrap {
+  position: absolute;
+  top: 98px; /* 70 */
+  left: 0;
+  width: 100%;
+  padding: 12px 0 12px 18px;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--input-color);
+}
+
+.list {
+  max-height: 120px; /* ??? */
+  overflow: auto;
+}
+
+.list_item {
+  position: relative;
+  padding: 6px 18px 6px 26px;
+  color: var(--placeholder-color);
+}
+
+.list_item_icon {
+  left: 0;
+}
