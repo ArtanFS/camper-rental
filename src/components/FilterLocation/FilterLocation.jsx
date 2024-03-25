@@ -5,6 +5,8 @@ import Button from 'components/Button/Button';
 import classNames from 'classnames';
 
 const FilterLocation = ({ inputLocation, value, openList, list }) => {
+  if (list.length) console.log('is');
+
   console.log(list);
   console.log(openList);
 
@@ -21,24 +23,34 @@ const FilterLocation = ({ inputLocation, value, openList, list }) => {
         />
         <Icon className={css.location_icon} id="locate" />
       </div>
-      {openList && list.length > 0 && (
+      {openList && (
         <div className={css.list_wrap}>
           <ul className={css.list}>
-            {list.map(({ id, city }) => (
-              <li key={id}>
-                <Button className={css.list_item}>
-                  {/* onClick={() => handleModelClick(model)} */}
-                  <Icon
-                    className={classNames(
-                      css.location_icon,
-                      css.list_item_icon
-                    )}
-                    id="locate"
-                  />
-                  {city}
-                </Button>
-              </li>
-            ))}
+            {list.length > 0 ? (
+              list.map(({ id, city }) => (
+                <li key={id}>
+                  <Button className={css.list_item}>
+                    {/* onClick={() => handleModelClick(model)} */}
+                    <Icon
+                      className={classNames(
+                        css.location_icon,
+                        css.list_item_icon
+                      )}
+                      id="locate"
+                    />
+                    {city}
+                  </Button>
+                </li>
+              ))
+            ) : (
+              <p className={css.list_item}>
+                <Icon
+                  className={classNames(css.location_icon, css.list_item_icon)}
+                  id="nolocate"
+                />
+                We don't have campers in this location
+              </p>
+            )}
           </ul>
         </div>
       )}

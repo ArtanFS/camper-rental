@@ -45,12 +45,11 @@ const Filters = () => {
         id: idx + 1,
         city,
       }));
-
-      setOpenListLocation(true);
       setFilteredLocations(filteredLocations);
 
-      if (filteredLocations.length) console.log('Cities: ', filteredLocations);
-    }
+      // console.log('No cities', filteredLocations);
+      setOpenListLocation(true);
+    } else setOpenListLocation(false);
   }, [allCampers, filterLocation]);
 
   // console.log('Cities: ', filteredLocations);
