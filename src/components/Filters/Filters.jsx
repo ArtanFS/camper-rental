@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Formik } from 'formik';
 import { useCampers } from 'hooks/useCampers';
@@ -11,17 +11,51 @@ import css from './Filters.module.css';
 
 const Filters = () => {
   const [filterLocation, setFilterLocation] = useState('');
+  const [filteredLocations, setFilteredLocations] = useState([]);
+  const [openListLocation, setOpenListLocation] = useState(false);
   const [filterEquipment, setFilterEquipment] = useState([]);
   const [filterType, setFilterType] = useState('');
 
   const dispatch = useDispatch();
 
   const allCampers = useCampers();
-  let allLocations = [];
   let filteredCampers = [...allCampers];
 
-  const handlerFilterLocation = ({ target }) =>
-    setFilterLocation(target.value.trim());
+  useEffect(() => {
+    let allLocations = [];
+    let filteredLocations = [];
+
+    for (const camper of allCampers) {
+      const arr = camper.location.split(', ');
+      allLocations.push([arr[1], arr[0]].join(', '));
+    }
+
+    allLocations = allLocations
+      .filter((value, idx, arr) => arr.indexOf(value) === idx)
+      .sort();
+
+    if (filterLocation) {
+      filteredLocations = allLocations.filter(city =>
+        city
+          .toLocaleLowerCase()
+          .includes(filterLocation.toLocaleLowerCase().trim())
+      );
+
+      filteredLocations = filteredLocations.map((city, idx) => ({
+        id: idx + 1,
+        city,
+      }));
+
+      setOpenListLocation(true);
+      setFilteredLocations(filteredLocations);
+
+      if (filteredLocations.length) console.log('Cities: ', filteredLocations);
+    }
+  }, [allCampers, filterLocation]);
+
+  // console.log('Cities: ', filteredLocations);
+
+  const handlerFilterLocation = ({ target }) => setFilterLocation(target.value);
 
   const handlerFilterEquipment = ({ target }) => {
     const arrIdx = filterEquipment.indexOf(target.value);
@@ -45,15 +79,11 @@ const Filters = () => {
   const handleSubmit = () => {
     if (allCampers.length === 0) return;
     if (filterLocation) {
-      for (const camper of allCampers) {
-        allLocations.push(camper.location);
-        allLocations = allLocations.filter(
-          (value, idx, arr) => arr.indexOf(value) === idx
-        );
-      }
       filteredCampers = allCampers.filter(
-        ({ location }) => location === filterLocation
+        // ({ location }) => location === filterLocation
+        ({ location }) => location.search(filterLocation) !== -1
       );
+      console.log(filteredCampers);
     }
 
     if (filterType)
@@ -104,6 +134,8 @@ const Filters = () => {
           <FilterLocation
             inputLocation={handlerFilterLocation}
             value={filterLocation}
+            openList={openListLocation}
+            list={filteredLocations}
           />
         </div>
         <div>
