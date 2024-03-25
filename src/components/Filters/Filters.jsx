@@ -10,9 +10,10 @@ import FilterLocation from 'components/FilterLocation/FilterLocation';
 import css from './Filters.module.css';
 
 const Filters = () => {
-  const [filterLocation, setFilterLocation] = useState('');
+  const [queryLocation, setQueryLocation] = useState('');
   const [filteredLocations, setFilteredLocations] = useState([]);
   const [openListLocation, setOpenListLocation] = useState(false);
+  const [isClickLocation, setIsClickLocation] = useState(false);
   const [filterEquipment, setFilterEquipment] = useState([]);
   const [filterType, setFilterType] = useState('');
 
@@ -34,11 +35,11 @@ const Filters = () => {
       .filter((value, idx, arr) => arr.indexOf(value) === idx)
       .sort();
 
-    if (filterLocation) {
+    if (queryLocation) {
       filteredLocations = allLocations.filter(city =>
         city
           .toLocaleLowerCase()
-          .includes(filterLocation.toLocaleLowerCase().trim())
+          .includes(queryLocation.toLocaleLowerCase().trim())
       );
 
       filteredLocations = filteredLocations.map((city, idx) => ({
@@ -47,14 +48,14 @@ const Filters = () => {
       }));
       setFilteredLocations(filteredLocations);
 
-      // console.log('No cities', filteredLocations);
-      setOpenListLocation(true);
+      !isClickLocation && setOpenListLocation(true);
     } else setOpenListLocation(false);
-  }, [allCampers, filterLocation]);
+  }, [allCampers, queryLocation, isClickLocation]);
 
-  // console.log('Cities: ', filteredLocations);
-
-  const handlerFilterLocation = ({ target }) => setFilterLocation(target.value);
+  const handlerQueryLocation = ({ target }) => {
+    setQueryLocation(target.value);
+    setIsClickLocation(false);
+  };
 
   const handlerFilterEquipment = ({ target }) => {
     const arrIdx = filterEquipment.indexOf(target.value);
@@ -75,12 +76,20 @@ const Filters = () => {
     setFilterType(target.value);
   };
 
+  const handleClickCity = city => {
+    setQueryLocation(city);
+    setIsClickLocation(true);
+    setOpenListLocation(false);
+  };
+
+  const handleCloseList = () => setOpenListLocation(false);
+
   const handleSubmit = () => {
     if (allCampers.length === 0) return;
-    if (filterLocation) {
+    if (queryLocation) {
       filteredCampers = allCampers.filter(
-        // ({ location }) => location === filterLocation
-        ({ location }) => location.search(filterLocation) !== -1
+        // ({ location }) => location === queryLocation
+        ({ location }) => location.search(queryLocation) !== -1
       );
       console.log(filteredCampers);
     }
@@ -131,10 +140,12 @@ const Filters = () => {
         <div>
           <h2 className={css.filter_location_title}>Location</h2>
           <FilterLocation
-            inputLocation={handlerFilterLocation}
-            value={filterLocation}
+            inputLocation={handlerQueryLocation}
+            value={queryLocation}
             openList={openListLocation}
             list={filteredLocations}
+            handleClick={handleClickCity}
+            onBlur={handleCloseList}
           />
         </div>
         <div>

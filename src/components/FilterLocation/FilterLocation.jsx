@@ -4,9 +4,14 @@ import css from './FilterLocation.module.css';
 import Button from 'components/Button/Button';
 import classNames from 'classnames';
 
-const FilterLocation = ({ inputLocation, value, openList, list }) => {
-  if (list.length) console.log('is');
-
+const FilterLocation = ({
+  inputLocation,
+  value,
+  openList,
+  list,
+  handleClick,
+  onBlur,
+}) => {
   console.log(list);
   console.log(openList);
 
@@ -20,6 +25,7 @@ const FilterLocation = ({ inputLocation, value, openList, list }) => {
           className={css.location_input}
           value={value}
           onChange={inputLocation}
+          onBlur={onBlur}
         />
         <Icon className={css.location_icon} id="locate" />
       </div>
@@ -29,8 +35,10 @@ const FilterLocation = ({ inputLocation, value, openList, list }) => {
             {list.length > 0 ? (
               list.map(({ id, city }) => (
                 <li key={id}>
-                  <Button className={css.list_item}>
-                    {/* onClick={() => handleModelClick(model)} */}
+                  <Button
+                    className={css.list_item}
+                    onClick={() => handleClick(city)}
+                  >
                     <Icon
                       className={classNames(
                         css.location_icon,
