@@ -77,12 +77,15 @@ const Filters = () => {
   };
 
   const handleClickCity = city => {
+    console.log(city);
     setQueryLocation(city);
     setIsClickLocation(true);
     setOpenListLocation(false);
   };
 
-  // const handleCloseList = () => setOpenListLocation(false);
+  const handleCloseList = () => {
+    setTimeout(() => setOpenListLocation(false), 150);
+  };
 
   const handleSubmit = () => {
     if (allCampers.length === 0) return;
@@ -145,7 +148,7 @@ const Filters = () => {
             openList={openListLocation}
             list={filteredLocations}
             handleClick={handleClickCity}
-            // onBlur={handleCloseList}
+            onBlur={handleCloseList}
           />
         </div>
         <div>
