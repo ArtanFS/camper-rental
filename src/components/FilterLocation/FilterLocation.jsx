@@ -18,7 +18,7 @@ const FilterLocation = ({
         <Field
           type="text"
           name="city"
-          placeholder="City                     p.s. work not correctly"
+          placeholder="City"
           className={css.location_input}
           value={value}
           onChange={inputLocation}

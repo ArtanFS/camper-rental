@@ -77,7 +77,6 @@ const Filters = () => {
   };
 
   const handleClickCity = city => {
-    console.log(city);
     setQueryLocation(city);
     setIsClickLocation(true);
     setOpenListLocation(false);
@@ -128,7 +127,9 @@ const Filters = () => {
           ({ details }) => details.shower > 0
         );
     }
-    dispatch(setFilteredCampers(filteredCampers));
+    console.log(filteredCampers);
+    if (filteredCampers.length === 0) dispatch(setFilteredCampers([{}]));
+    else dispatch(setFilteredCampers(filteredCampers));
   };
 
   return (
