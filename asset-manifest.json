@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/campersrent/static/css/main.ce829fd6.css",
-    "main.js": "/campersrent/static/js/main.854979ef.js",
+    "main.js": "/campersrent/static/js/main.bc3b720b.js",
     "static/css/240.b7f5d9fe.chunk.css": "/campersrent/static/css/240.b7f5d9fe.chunk.css",
     "static/js/240.47365258.chunk.js": "/campersrent/static/js/240.47365258.chunk.js",
     "static/css/667.8738159c.chunk.css": "/campersrent/static/css/667.8738159c.chunk.css",
-    "static/js/667.f8737a7a.chunk.js": "/campersrent/static/js/667.f8737a7a.chunk.js",
+    "static/js/667.13f7dca4.chunk.js": "/campersrent/static/js/667.13f7dca4.chunk.js",
     "static/css/81.7dab73ed.chunk.css": "/campersrent/static/css/81.7dab73ed.chunk.css",
     "static/js/81.56cb004b.chunk.js": "/campersrent/static/js/81.56cb004b.chunk.js",
     "static/js/48.92e679f9.chunk.js": "/campersrent/static/js/48.92e679f9.chunk.js",
@@ -20,11 +20,11 @@
     "static/media/sprite.svg": "/campersrent/static/media/sprite.8b5d1f5b300cfc9c26c0cd6b680509fb.svg",
     "index.html": "/campersrent/index.html",
     "main.ce829fd6.css.map": "/campersrent/static/css/main.ce829fd6.css.map",
-    "main.854979ef.js.map": "/campersrent/static/js/main.854979ef.js.map",
+    "main.bc3b720b.js.map": "/campersrent/static/js/main.bc3b720b.js.map",
     "240.b7f5d9fe.chunk.css.map": "/campersrent/static/css/240.b7f5d9fe.chunk.css.map",
     "240.47365258.chunk.js.map": "/campersrent/static/js/240.47365258.chunk.js.map",
     "667.8738159c.chunk.css.map": "/campersrent/static/css/667.8738159c.chunk.css.map",
-    "667.f8737a7a.chunk.js.map": "/campersrent/static/js/667.f8737a7a.chunk.js.map",
+    "667.13f7dca4.chunk.js.map": "/campersrent/static/js/667.13f7dca4.chunk.js.map",
     "81.7dab73ed.chunk.css.map": "/campersrent/static/css/81.7dab73ed.chunk.css.map",
     "81.56cb004b.chunk.js.map": "/campersrent/static/js/81.56cb004b.chunk.js.map",
     "48.92e679f9.chunk.js.map": "/campersrent/static/js/48.92e679f9.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.ce829fd6.css",
-    "static/js/main.854979ef.js"
+    "static/js/main.bc3b720b.js"
   ]
 }
