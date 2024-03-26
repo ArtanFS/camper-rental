@@ -10,6 +10,8 @@ const Layout = () => {
       performance.getEntriesByType('navigation')[0].type === 'reload';
 
     if (isPageRefreshed) window.location.replace('/campersrent');
+    console.log('F5 ', isPageRefreshed);
+    console.log('Page ', window.location);
   }, []);
 
   return (
