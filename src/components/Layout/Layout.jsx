@@ -11,7 +11,7 @@ const Layout = () => {
     const isPageRefreshed =
       performance.getEntriesByType('navigation')[0].type === 'reload';
 
-    if (isPageRefreshed) navigate('/');
+    if (isPageRefreshed) navigate('/campersrent');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
