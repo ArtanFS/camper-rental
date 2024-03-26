@@ -12,16 +12,13 @@ const FilterLocation = ({
   handleClick,
   onBlur,
 }) => {
-  console.log(list);
-  console.log(openList);
-
   return (
     <>
       <div className={css.location_input_wrap}>
         <Field
           type="text"
           name="city"
-          placeholder="City                            not work :((("
+          placeholder="City                     p.s. work not correctly"
           className={css.location_input}
           value={value}
           onChange={inputLocation}

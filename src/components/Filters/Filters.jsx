@@ -82,16 +82,16 @@ const Filters = () => {
     setOpenListLocation(false);
   };
 
-  const handleCloseList = () => setOpenListLocation(false);
+  // const handleCloseList = () => setOpenListLocation(false);
 
   const handleSubmit = () => {
     if (allCampers.length === 0) return;
     if (queryLocation) {
+      const arr = queryLocation.split(', ');
       filteredCampers = allCampers.filter(
-        // ({ location }) => location === queryLocation
-        ({ location }) => location.search(queryLocation) !== -1
+        ({ location }) =>
+          location.toLocaleLowerCase().search(arr[0].toLocaleLowerCase()) !== -1
       );
-      console.log(filteredCampers);
     }
 
     if (filterType)
@@ -145,7 +145,7 @@ const Filters = () => {
             openList={openListLocation}
             list={filteredLocations}
             handleClick={handleClickCity}
-            onBlur={handleCloseList}
+            // onBlur={handleCloseList}
           />
         </div>
         <div>
