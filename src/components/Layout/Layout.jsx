@@ -10,8 +10,6 @@ const Layout = () => {
       performance.getEntriesByType('navigation')[0].type === 'reload';
 
     if (isPageRefreshed) window.location.replace('/campersrent');
-    // window.location.replace('/home');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
