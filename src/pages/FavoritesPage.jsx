@@ -7,6 +7,13 @@ import {
 import FavCampers from 'components/FavCampers/FavCampers';
 
 const FavoritesPage = () => {
+  useEffect(() => {
+    const isPageRefreshed =
+      performance.getEntriesByType('navigation')[0].type === 'reload';
+
+    if (isPageRefreshed) window.location.replace('/campersrent');
+  }, []);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
