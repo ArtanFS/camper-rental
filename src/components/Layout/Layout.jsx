@@ -15,6 +15,7 @@ const Layout = () => {
     if (isPageRefreshed) navigate('/campersrent');
     console.log('F5 ', isPageRefreshed);
     console.log('Page ', window.location);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
