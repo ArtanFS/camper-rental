@@ -10,9 +10,11 @@ const Layout = () => {
       <Header />
       <main className={css.main}>
         <div className={css.container}>
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
+          <div className={css.wrap}>
+            <Suspense fallback={<Loader />}>
+              <Outlet />
+            </Suspense>
+          </div>
         </div>
       </main>
     </>

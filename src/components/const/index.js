@@ -1,0 +1,1 @@
+export { campersSwipe } from './campersSwipe';

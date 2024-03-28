@@ -1,6 +1,7 @@
 .catalog_section {
-  padding-left: 424px;
-  width: 1312px;
+  /* padding-left: 424px; */
+  width: 888px;
+  margin: 0 auto;
 }
 
 .card_list {

@@ -6,6 +6,7 @@ import { getCampers, getCampersByPage } from '../redux/campers/campersApi';
 import { useShownCampers } from 'hooks/useShownCampers';
 import { useFilteredCampers } from 'hooks/useFilteredCampers';
 import { useCampers } from 'hooks/useCampers';
+import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -38,15 +39,17 @@ const CatalogPage = () => {
   const filtered = filteredCampers.length > 0 ? false : true;
 
   return (
-    <>
-      <Filters />
-      <Catalog
-        campers={data}
-        onClick={getMoreCampers}
-        isLoadMore={isLoadMore}
-        filtered={filtered}
-      />
-    </>
+    <div className={css.container}>
+      <div className={css.wrap}>
+        <Filters />
+        <Catalog
+          campers={data}
+          onClick={getMoreCampers}
+          isLoadMore={isLoadMore}
+          filtered={filtered}
+        />
+      </div>
+    </div>
   );
 };
 

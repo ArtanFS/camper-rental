@@ -25,3 +25,17 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+.scroll_container {
+  overflow-y: auto;
+  height: 650px;
+}
+
+.scroll_container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll_container::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color);
+  border-radius: 4px;
+}

@@ -8,10 +8,18 @@
 }
 
 .container {
-  max-width: 1440px;
-  width: 100%;
-  padding: 12px 64px;
+  width: 1312px;
+  /* width: 100%; */
+  padding: 12px 0;
+  /* display: flex;
+  justify-content: center; */
+  margin: 0 auto;
 }
+
+/* .nav {
+  width: 100%;
+  margin: 0 auto;
+} */
 
 .nav_list {
   display: flex;
