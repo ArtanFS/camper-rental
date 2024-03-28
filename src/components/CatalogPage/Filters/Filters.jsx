@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Formik } from 'formik';
 import { useCampers } from 'hooks/useCampers';
-import { setFilteredCampers } from '../../redux/campers/campersSlice';
-import Button from 'components/Button/Button';
-import FilterEquipment from 'components/FilterEquipment/FilterEquipment';
-import FilterType from 'components/FilterType/FilterType';
-import FilterLocation from 'components/FilterLocation/FilterLocation';
+import { setFilteredCampers } from '../../../redux/campers/campersSlice';
+import Button from 'components/UI/Button/Button';
+import FilterEquipment from 'components/CatalogPage/FilterEquipment/FilterEquipment';
+import FilterType from 'components/CatalogPage/FilterType/FilterType';
+import FilterLocation from 'components/CatalogPage/FilterLocation/FilterLocation';
 import css from './Filters.module.css';
 
 const Filters = () => {
@@ -133,41 +133,43 @@ const Filters = () => {
   };
 
   return (
-    <Formik
-      initialValues={{
-        options: [],
-        form: '',
-      }}
-      onSubmit={handleSubmit}
-    >
-      <Form className={css.filters_form}>
-        <div>
-          <h2 className={css.filter_location_title}>Location</h2>
-          <FilterLocation
-            inputLocation={handlerQueryLocation}
-            value={queryLocation}
-            openList={openListLocation}
-            list={filteredLocations}
-            handleClick={handleClickCity}
-            onBlur={handleCloseList}
-          />
-        </div>
-        <div>
-          <h2 className={css.filters_title}>Filters</h2>
-          <h3 className={css.filters_type_title}>Vehicle equipment</h3>
-          <FilterEquipment setEquipment={handlerFilterEquipment} />
-        </div>
-        <div>
-          <h3 className={css.filters_type_title}>Vehicle type</h3>
-          <FilterType setType={handlerFilterType} />
-        </div>
-        <div>
-          <Button className={css.filter_btn} type="submit">
-            Search
-          </Button>
-        </div>
-      </Form>
-    </Formik>
+    <section className={css.section}>
+      <Formik
+        initialValues={{
+          options: [],
+          form: '',
+        }}
+        onSubmit={handleSubmit}
+      >
+        <Form className={css.form}>
+          <div>
+            <h2 className={css.location_title}>Location</h2>
+            <FilterLocation
+              inputLocation={handlerQueryLocation}
+              value={queryLocation}
+              openList={openListLocation}
+              list={filteredLocations}
+              handleClick={handleClickCity}
+              onBlur={handleCloseList}
+            />
+          </div>
+          <div>
+            <h2 className={css.title}>Filters</h2>
+            <h3 className={css.type_title}>Vehicle equipment</h3>
+            <FilterEquipment setEquipment={handlerFilterEquipment} />
+          </div>
+          <div>
+            <h3 className={css.type_title}>Vehicle type</h3>
+            <FilterType setType={handlerFilterType} />
+          </div>
+          <div>
+            <Button className={css.btn} type="submit">
+              Search
+            </Button>
+          </div>
+        </Form>
+      </Formik>
+    </section>
   );
 };
 

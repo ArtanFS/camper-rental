@@ -1,33 +1,37 @@
-.filters_form {
+.section {
   position: fixed;
   width: 360px;
+  padding-top: 12px;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.filter_location_title {
+.location_title {
   font-size: 16px;
   font-weight: 500;
   color: var(--placeholder-color);
   margin-bottom: 8px;
 }
 
-.filters_title {
+.title {
   font-size: 16px;
   font-weight: 500;
   color: var(--text-color);
   margin-bottom: 14px;
 }
 
-.filters_type_title {
+.type_title {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 24px;
 }
 
-.filter_btn {
+.btn {
   padding: 16px 60px;
   border-radius: 200px;
   background-color: var(--btn-color);
@@ -37,6 +41,6 @@
   letter-spacing: -0.08px;
 }
 
-.filter_btn:hover {
+.btn:hover {
   background-color: var(--btn-active-color);
 }

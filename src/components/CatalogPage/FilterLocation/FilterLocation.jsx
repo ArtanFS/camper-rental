@@ -1,7 +1,7 @@
 import { Field } from 'formik';
-import Icon from 'components/Icon/Icon';
+import Icon from 'components/UI/Icon/Icon';
 import css from './FilterLocation.module.css';
-import Button from 'components/Button/Button';
+import Button from 'components/UI/Button/Button';
 import classNames from 'classnames';
 
 const FilterLocation = ({

@@ -4,7 +4,7 @@ import {
   deleteFilteredCampers,
   deleteShownCampers,
 } from '../redux/campers/campersSlice';
-import { Swipe } from 'components/HomePage/Swipe';
+import { Swipe } from 'components/HomePage';
 import css from './HomePage.module.css';
 
 const HomePage = () => {

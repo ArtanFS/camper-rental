@@ -1,6 +1,6 @@
-import CardImg from 'components/CardImg/CardImg';
+import CardImg from 'components/CatalogPage/CardImg/CardImg';
 import css from './NoCards.module.css';
-import noCamp from '../../images/noimage/nocamp.jpg';
+import noCamp from '../../../images/noimage/nocamp.jpg';
 
 const NoCards = () => {
   return (

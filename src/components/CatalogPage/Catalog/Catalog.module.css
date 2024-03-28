@@ -1,6 +1,23 @@
-.catalog_section {
-  padding-left: 424px;
-  width: 1312px;
+.section {
+  width: 1336px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scroll_container {
+  overflow-y: auto;
+  width: 912px;
+  height: 738px;
+  padding-top: 14px;
+}
+
+.scroll_container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll_container::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-color);
+  border-radius: 4px;
 }
 
 .card_list {
@@ -25,19 +42,4 @@
 .loadmore_btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.scroll_container {
-  overflow-y: auto;
-  height: 690px;
-  width: 912px;
-}
-
-.scroll_container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scroll_container::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-color);
-  border-radius: 4px;
 }

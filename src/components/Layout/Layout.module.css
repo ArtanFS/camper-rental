@@ -1,13 +1,21 @@
-.main {
-  /* position: relative; */
-  padding-top: 48px;
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
-.container {
-  /* max-width: 100%; */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 24px 64px;
-  display: flex;
-  gap: 64px;
-  justify-content: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--stripe-color);
+  z-index: 999;
+}
+
+.main {
+  padding-top: 40px;
+  padding-bottom: 12px;
 }

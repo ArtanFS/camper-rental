@@ -7,10 +7,9 @@ import {
   useShownCampers,
 } from 'hooks/useCampers';
 import { useIsLoading } from 'hooks/useUI';
-import Catalog from 'components/Catalog/Catalog';
-import Filters from 'components/Filters/Filters';
+import Catalog from 'components/CatalogPage/Catalog/Catalog';
+import Filters from 'components/CatalogPage/Filters/Filters';
 import Loader from 'components/Loader/Loader';
-import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -44,18 +43,18 @@ const CatalogPage = () => {
   const filtered = filteredCampers.length > 0 ? false : true;
 
   return (
-    <div className={css.container}>
-      <div className={css.wrap}>
-        {isLoading && <Loader />}
-        <Filters />
-        <Catalog
-          campers={data}
-          onClick={getMoreCampers}
-          isLoadMore={isLoadMore}
-          filtered={filtered}
-        />
-      </div>
-    </div>
+    <>
+      {/* <div className={css.wrap}> */}
+      {isLoading && <Loader />}
+      <Filters />
+      <Catalog
+        campers={data}
+        onClick={getMoreCampers}
+        isLoadMore={isLoadMore}
+        filtered={filtered}
+      />
+      {/* </div> */}
+    </>
   );
 };
 

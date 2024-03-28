@@ -1,4 +1,4 @@
-import Option from 'components/Option/Option';
+import Option from 'components/CatalogPage/Option/Option';
 import css from './Features.module.css';
 
 const Features = ({ data }) => {

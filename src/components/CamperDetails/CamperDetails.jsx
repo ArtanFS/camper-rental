@@ -1,9 +1,9 @@
-import Rating from 'components/Rating/Rating';
+import Rating from 'components/CatalogPage/Rating/Rating';
 import css from './CamperDetails.module.css';
-import Price from 'components/Price/Price';
+import Price from 'components/CatalogPage/Price/Price';
 import { useState } from 'react';
-import CardImg from 'components/CardImg/CardImg';
-import Button from 'components/Button/Button';
+import CardImg from 'components/CatalogPage/CardImg/CardImg';
+import Button from 'components/UI/Button/Button';
 import Features from 'components/Features/Features';
 import Reviewes from 'components/Reviews/Reviews';
 

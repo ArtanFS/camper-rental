@@ -1,4 +1,4 @@
-import CamperCard from 'components/CamperCard/CamperCard';
+import CamperCard from 'components/CatalogPage/CamperCard/CamperCard';
 import css from './FavCampers.module.css';
 import { useFavCampers } from 'hooks/useCampers';
 

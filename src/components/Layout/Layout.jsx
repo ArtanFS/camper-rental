@@ -2,19 +2,21 @@ import Loader from 'components/Loader/Loader';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
-import Header from 'components/Header/Header';
+import HeaderNav from 'components/HeaderNav/HeaderNav';
 
 const Layout = () => {
   return (
     <>
-      <Header />
+      <header className={css.header}>
+        <div className={css.container}>
+          <HeaderNav />
+        </div>
+      </header>
       <main className={css.main}>
         <div className={css.container}>
-          <div className={css.wrap}>
-            <Suspense fallback={<Loader />}>
-              <Outlet />
-            </Suspense>
-          </div>
+          <Suspense fallback={<Loader />}>
+            <Outlet />
+          </Suspense>
         </div>
       </main>
     </>

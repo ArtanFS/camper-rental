@@ -1,4 +1,4 @@
-import Icon from 'components/Icon/Icon';
+import Icon from 'components/UI/Icon/Icon';
 import css from './Option.module.css';
 
 const Option = ({ className, classNameIcon, id, children }) => {
