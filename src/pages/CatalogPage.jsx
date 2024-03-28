@@ -7,10 +7,13 @@ import { useShownCampers } from 'hooks/useShownCampers';
 import { useFilteredCampers } from 'hooks/useFilteredCampers';
 import { useCampers } from 'hooks/useCampers';
 import css from './CatalogPage.module.css';
+import { useIsLoading } from 'hooks/useUI';
+import Loader from 'components/Loader/Loader';
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
   const [isLoadMore, setIisLoadMore] = useState(true);
+  const isLoading = useIsLoading();
 
   const dispatch = useDispatch();
 
@@ -41,6 +44,7 @@ const CatalogPage = () => {
   return (
     <div className={css.container}>
       <div className={css.wrap}>
+        {isLoading && <Loader />}
         <Filters />
         <Catalog
           campers={data}
