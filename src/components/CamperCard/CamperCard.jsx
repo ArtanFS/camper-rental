@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useFavCampers } from 'hooks/useFavCampers';
 import { setFavCampers } from '../../redux/campers/campersSlice';
 import Button from 'components/Button/Button';
 import Icon from 'components/Icon/Icon';
@@ -12,6 +11,7 @@ import Rating from 'components/Rating/Rating';
 import CardImg from 'components/CardImg/CardImg';
 import css from './CamperCard.module.css';
 import classNames from 'classnames';
+import { useFavCampers } from 'hooks/useCampers';
 
 const CamperCard = ({ data }) => {
   const [openDetailsModal, setOpenDetailsModal] = useState(false);

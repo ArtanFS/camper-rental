@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { getCampers, getCampersByPage } from '../redux/campers/campersApi';
+import {
+  useCampers,
+  useFilteredCampers,
+  useShownCampers,
+} from 'hooks/useCampers';
+import { useIsLoading } from 'hooks/useUI';
 import Catalog from 'components/Catalog/Catalog';
 import Filters from 'components/Filters/Filters';
-import { getCampers, getCampersByPage } from '../redux/campers/campersApi';
-import { useShownCampers } from 'hooks/useShownCampers';
-import { useFilteredCampers } from 'hooks/useFilteredCampers';
-import { useCampers } from 'hooks/useCampers';
-import css from './CatalogPage.module.css';
-import { useIsLoading } from 'hooks/useUI';
 import Loader from 'components/Loader/Loader';
+import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);

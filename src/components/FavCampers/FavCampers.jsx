@@ -1,6 +1,6 @@
-import { useFavCampers } from 'hooks/useFavCampers';
 import CamperCard from 'components/CamperCard/CamperCard';
 import css from './FavCampers.module.css';
+import { useFavCampers } from 'hooks/useCampers';
 
 const FavCampers = () => {
   const favCampers = useFavCampers();

@@ -4,6 +4,7 @@
 }
 
 .card_list {
+  width: 888px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -28,7 +29,8 @@
 
 .scroll_container {
   overflow-y: auto;
-  height: 650px;
+  height: 690px;
+  width: 912px;
 }
 
 .scroll_container::-webkit-scrollbar {
