@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { campersSwipe } from 'components/const';
+import { campersSwipe } from 'const';
 
 import css from './Swipe.module.css';
 

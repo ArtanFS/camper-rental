@@ -1,6 +1,6 @@
-import camp1 from '../../images/swipes/camp1.webp';
-import camp2 from '../../images/swipes/camp2.webp';
-import camp3 from '../../images/swipes/camp3.webp';
+import camp1 from '../images/swipes/camp1.webp';
+import camp2 from '../images/swipes/camp2.webp';
+import camp3 from '../images/swipes/camp3.webp';
 
 export const campersSwipe = [
   {
