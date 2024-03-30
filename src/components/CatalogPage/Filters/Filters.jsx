@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Formik } from 'formik';
 import { useCampers } from 'hooks/useCampers';
@@ -10,10 +10,7 @@ import { FilterLocation } from 'components/CatalogPage/FilterLocation';
 import css from './Filters.module.css';
 
 export const Filters = () => {
-  const [queryLocation, setQueryLocation] = useState('');
-  const [filteredLocations, setFilteredLocations] = useState([]);
-  const [openListLocation, setOpenListLocation] = useState(false);
-  const [isClickLocation, setIsClickLocation] = useState(false);
+  const [filterLocation, setFilterLocation] = useState('');
   const [filterEquipment, setFilterEquipment] = useState([]);
   const [filterType, setFilterType] = useState('');
 
@@ -22,39 +19,8 @@ export const Filters = () => {
   const allCampers = useCampers();
   let filteredCampers = [...allCampers];
 
-  useEffect(() => {
-    let allLocations = [];
-    let filteredLocations = [];
-
-    for (const camper of allCampers) {
-      const arr = camper.location.split(', ');
-      allLocations.push([arr[1], arr[0]].join(', '));
-    }
-
-    allLocations = allLocations
-      .filter((value, idx, arr) => arr.indexOf(value) === idx)
-      .sort();
-
-    if (queryLocation) {
-      filteredLocations = allLocations.filter(city =>
-        city
-          .toLocaleLowerCase()
-          .includes(queryLocation.toLocaleLowerCase().trim())
-      );
-
-      filteredLocations = filteredLocations.map((city, idx) => ({
-        id: idx + 1,
-        city,
-      }));
-      setFilteredLocations(filteredLocations);
-
-      !isClickLocation && setOpenListLocation(true);
-    } else setOpenListLocation(false);
-  }, [allCampers, queryLocation, isClickLocation]);
-
-  const handlerQueryLocation = ({ target }) => {
-    setQueryLocation(target.value);
-    setIsClickLocation(false);
+  const handlerFilterLocation = city => {
+    setFilterLocation(city);
   };
 
   const handlerFilterEquipment = ({ target }) => {
@@ -75,20 +41,10 @@ export const Filters = () => {
     setFilterType(target.value);
   };
 
-  const handleClickCity = city => {
-    setQueryLocation(city);
-    setIsClickLocation(true);
-    setOpenListLocation(false);
-  };
-
-  const handleCloseList = () => {
-    setTimeout(() => setOpenListLocation(false), 150);
-  };
-
   const handleSubmit = () => {
     if (allCampers.length === 0) return;
-    if (queryLocation) {
-      const arr = queryLocation.split(', ');
+    if (filterLocation) {
+      const arr = filterLocation.split(', ');
       filteredCampers = allCampers.filter(
         ({ location }) =>
           location.toLocaleLowerCase().search(arr[0].toLocaleLowerCase()) !== -1
@@ -126,7 +82,6 @@ export const Filters = () => {
           ({ details }) => details.shower > 0
         );
     }
-    console.log(filteredCampers);
     if (filteredCampers.length === 0) dispatch(setFilteredCampers([{}]));
     else dispatch(setFilteredCampers(filteredCampers));
   };
@@ -143,14 +98,7 @@ export const Filters = () => {
         <Form className={css.form}>
           <div>
             <h2 className={css.location_title}>Location</h2>
-            <FilterLocation
-              inputLocation={handlerQueryLocation}
-              value={queryLocation}
-              openList={openListLocation}
-              list={filteredLocations}
-              handleClick={handleClickCity}
-              onBlur={handleCloseList}
-            />
+            <FilterLocation setLocation={handlerFilterLocation} />
           </div>
           <div>
             <h2 className={css.title}>Filters</h2>
