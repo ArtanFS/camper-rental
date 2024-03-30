@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { setFavCampers } from '../../../redux/campers/campersSlice';
-import Button from 'components/UI/Button/Button';
-import Icon from 'components/UI/Icon/Icon';
+import { setFavCampers } from 'store/campers/campersSlice';
 import Option from 'components/CatalogPage/Option/Option';
 import Price from 'components/CatalogPage/Price/Price';
 import Modal from 'components/Modal/Modal';
 import CamperDetails from 'components/CamperDetails/CamperDetails';
 import Rating from 'components/CatalogPage/Rating/Rating';
-import CardImg from 'components/CatalogPage/CardImg/CardImg';
-import css from './CamperCard.module.css';
+import CardImg from 'components/CatalogPage/CatalogCardImg/CatalogCardImg';
+import css from './CatalogCard.module.css';
 import classNames from 'classnames';
 import { useFavCampers } from 'hooks/useCampers';
+import { Icon, Button } from 'components/UI';
 
-const CamperCard = ({ data }) => {
+const CatalogCard = ({ data }) => {
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -94,4 +93,4 @@ const CamperCard = ({ data }) => {
   );
 };
 
-export default CamperCard;
+export default CatalogCard;

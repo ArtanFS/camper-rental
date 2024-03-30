@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Form, Formik } from 'formik';
 import { useCampers } from 'hooks/useCampers';
-import { setFilteredCampers } from '../../../redux/campers/campersSlice';
-import Button from 'components/UI/Button/Button';
-import FilterEquipment from 'components/CatalogPage/FilterEquipment/FilterEquipment';
-import FilterType from 'components/CatalogPage/FilterType/FilterType';
-import FilterLocation from 'components/CatalogPage/FilterLocation/FilterLocation';
+import { setFilteredCampers } from 'store/campers/campersSlice';
+import { Button } from 'components/UI';
+import { FilterEquipment } from 'components/CatalogPage/FilterEquipment';
+import { FilterType } from 'components/CatalogPage/FilterType';
+import { FilterLocation } from 'components/CatalogPage/FilterLocation';
 import css from './Filters.module.css';
 
-const Filters = () => {
+export const Filters = () => {
   const [queryLocation, setQueryLocation] = useState('');
   const [filteredLocations, setFilteredLocations] = useState([]);
   const [openListLocation, setOpenListLocation] = useState(false);
@@ -64,7 +64,6 @@ const Filters = () => {
         ...filterEquipment.slice(0, arrIdx),
         ...filterEquipment.slice(arrIdx + 1),
       ];
-      // filterEquipment.splice(arrIdx, 1);
       setFilterEquipment(arr);
     } else {
       const arr = [...filterEquipment, target.value];
@@ -172,5 +171,3 @@ const Filters = () => {
     </section>
   );
 };
-
-export default Filters;

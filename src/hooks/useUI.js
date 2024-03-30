@@ -1,8 +1,5 @@
 import { useSelector } from 'react-redux';
-import {
-  selectError,
-  selectIsLoading,
-} from '../redux/campers/campersSelectors';
+import { selectError, selectIsLoading } from 'store/campers/campersSelectors';
 
 export const useIsLoading = () => useSelector(selectIsLoading);
 

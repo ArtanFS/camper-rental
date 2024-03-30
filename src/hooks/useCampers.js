@@ -4,7 +4,7 @@ import {
   selectFavCampers,
   selectFilteredCampers,
   selectShownCampers,
-} from '../redux/campers/campersSelectors';
+} from 'store/campers/campersSelectors';
 
 export const useCampers = () => useSelector(selectCampers);
 

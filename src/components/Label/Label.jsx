@@ -1,4 +1,4 @@
-import Icon from 'components/UI/Icon/Icon';
+import { Icon } from 'components/UI';
 import css from './Label.module.css';
 
 const Label = ({ className, classNameIcon, id, title }) => {

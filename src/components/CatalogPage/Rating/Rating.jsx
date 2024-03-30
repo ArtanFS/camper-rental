@@ -1,4 +1,4 @@
-import Icon from 'components/UI/Icon/Icon';
+import { Icon } from 'components/UI';
 import css from './Rating.module.css';
 
 const Rating = ({ data }) => {

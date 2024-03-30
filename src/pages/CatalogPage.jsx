@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getCampers, getCampersByPage } from '../redux/campers/campersApi';
+import { getCampers, getCampersByPage } from 'store/campers/campersApi';
 import {
   useCampers,
   useFilteredCampers,
   useShownCampers,
 } from 'hooks/useCampers';
 import { useIsLoading } from 'hooks/useUI';
-import Catalog from 'components/CatalogPage/Catalog/Catalog';
-import Filters from 'components/CatalogPage/Filters/Filters';
-import Loader from 'components/Loader/Loader';
+import { Catalog } from 'components/CatalogPage/Catalog';
+import { Filters } from 'components/CatalogPage/Filters';
+import { Loader } from 'components/UI';
 
 const CatalogPage = () => {
   const [page, setPage] = useState(1);
@@ -44,7 +44,6 @@ const CatalogPage = () => {
 
   return (
     <>
-      {/* <div className={css.wrap}> */}
       {isLoading && <Loader />}
       <Filters />
       <Catalog
@@ -53,7 +52,6 @@ const CatalogPage = () => {
         isLoadMore={isLoadMore}
         filtered={filtered}
       />
-      {/* </div> */}
     </>
   );
 };

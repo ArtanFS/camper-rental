@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BASE_URL = 'https://65fac89d3909a9a65b1b85fa.mockapi.io/api/v1/';
-// const BASE_URL = 'http://localhost:3001/';
+// const BASE_URL = 'https://65fac89d3909a9a65b1b85fa.mockapi.io/api/v1/';
+const BASE_URL = 'http://localhost:3001/';
 
 const api = axios.create({
   baseURL: BASE_URL,

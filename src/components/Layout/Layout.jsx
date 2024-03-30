@@ -1,10 +1,10 @@
-import Loader from 'components/Loader/Loader';
+import { Loader } from 'components/UI';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import css from './Layout.module.css';
 import HeaderNav from 'components/HeaderNav/HeaderNav';
 
-const Layout = () => {
+export const Layout = () => {
   return (
     <>
       <header className={css.header}>
@@ -22,5 +22,3 @@ const Layout = () => {
     </>
   );
 };
-
-export default Layout;

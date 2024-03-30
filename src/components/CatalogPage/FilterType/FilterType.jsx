@@ -2,7 +2,7 @@ import css from './FilterType.module.css';
 import { Field } from 'formik';
 import Label from 'components/Label/Label';
 
-const FilterType = ({ setType }) => {
+export const FilterType = ({ setType }) => {
   return (
     <div className={css.filter_wrapper}>
       <div role="group" className={css.radio} onChange={setType}>
@@ -49,5 +49,3 @@ const FilterType = ({ setType }) => {
     </div>
   );
 };
-
-export default FilterType;

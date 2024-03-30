@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux';
 import {
   deleteFilteredCampers,
   deleteShownCampers,
-} from '../redux/campers/campersSlice';
-import { Swipe } from 'components/HomePage';
+} from 'store/campers/campersSlice';
+import { Swipe } from 'components/HomePage/Swipe';
 import css from './HomePage.module.css';
 
 const HomePage = () => {

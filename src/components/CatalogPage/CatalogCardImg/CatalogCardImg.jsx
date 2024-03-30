@@ -1,4 +1,4 @@
-import css from './CardImg.module.css';
+import css from './CatalogCardImg.module.css';
 
 const CardImg = ({ src, alt }) => {
   return (

@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import Button from 'components/UI/Button/Button';
-import Icon from 'components/UI/Icon/Icon';
+import { Icon, Button } from 'components/UI';
 import css from './Modal.module.css';
 import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 

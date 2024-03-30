@@ -1,10 +1,9 @@
 import { Field } from 'formik';
-import Icon from 'components/UI/Icon/Icon';
-import css from './FilterLocation.module.css';
-import Button from 'components/UI/Button/Button';
 import classNames from 'classnames';
+import { Icon, Button } from 'components/UI';
+import css from './FilterLocation.module.css';
 
-const FilterLocation = ({
+export const FilterLocation = ({
   inputLocation,
   value,
   openList,
@@ -62,5 +61,3 @@ const FilterLocation = ({
     </>
   );
 };
-
-export default FilterLocation;

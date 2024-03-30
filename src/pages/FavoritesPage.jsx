@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import {
   deleteFilteredCampers,
   deleteShownCampers,
-} from '../redux/campers/campersSlice';
+} from 'store/campers/campersSlice';
 import FavCampers from 'components/FavCampers/FavCampers';
 
 const FavoritesPage = () => {
