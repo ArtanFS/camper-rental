@@ -3,16 +3,18 @@ import { useDispatch } from 'react-redux';
 import { Form, Formik } from 'formik';
 import { useCampers } from 'hooks/useCampers';
 import { setFilteredCampers } from 'store/campers/campersSlice';
+import { FilterLocation } from '../FilterLocation';
+import { FilterEquipment } from '../FilterEquipment';
+import { FilterType } from '../FilterType';
 import { Button } from 'components/UI';
-import { FilterEquipment } from 'components/CatalogPage/FilterEquipment';
-import { FilterType } from 'components/CatalogPage/FilterType';
-import { FilterLocation } from 'components/CatalogPage/FilterLocation';
 import css from './Filters.module.css';
+import classNames from 'classnames';
 
 export const Filters = () => {
   const [filterLocation, setFilterLocation] = useState('');
   const [filterEquipment, setFilterEquipment] = useState([]);
   const [filterType, setFilterType] = useState('');
+  const [isResetFilters, setIsResetFilters] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -21,6 +23,7 @@ export const Filters = () => {
 
   const handlerFilterLocation = city => {
     setFilterLocation(city);
+    setIsResetFilters(false);
   };
 
   const handlerFilterEquipment = ({ target }) => {
@@ -86,6 +89,12 @@ export const Filters = () => {
     else dispatch(setFilteredCampers(filteredCampers));
   };
 
+  const handleResetFilters = actions => {
+    setFilterLocation('');
+    setIsResetFilters(true);
+    dispatch(setFilteredCampers([]));
+  };
+
   return (
     <section className={css.section}>
       <Formik
@@ -94,27 +103,39 @@ export const Filters = () => {
           form: '',
         }}
         onSubmit={handleSubmit}
+        onReset={handleResetFilters}
       >
-        <Form className={css.form}>
-          <div>
-            <h2 className={css.location_title}>Location</h2>
-            <FilterLocation setLocation={handlerFilterLocation} />
-          </div>
-          <div>
-            <h2 className={css.title}>Filters</h2>
-            <h3 className={css.type_title}>Vehicle equipment</h3>
-            <FilterEquipment setEquipment={handlerFilterEquipment} />
-          </div>
-          <div>
-            <h3 className={css.type_title}>Vehicle type</h3>
-            <FilterType setType={handlerFilterType} />
-          </div>
-          <div>
-            <Button className={css.btn} type="submit">
-              Search
-            </Button>
-          </div>
-        </Form>
+        {({ resetForm }) => (
+          <Form className={css.form}>
+            <div>
+              <h2 className={css.location_title}>Location</h2>
+              <FilterLocation
+                setLocation={handlerFilterLocation}
+                reset={isResetFilters}
+              />
+            </div>
+            <div>
+              <h2 className={css.title}>Filters</h2>
+              <h3 className={css.type_title}>Vehicle equipment</h3>
+              <FilterEquipment setEquipment={handlerFilterEquipment} />
+            </div>
+            <div>
+              <h3 className={css.type_title}>Vehicle type</h3>
+              <FilterType setType={handlerFilterType} />
+            </div>
+            <div className={css.btn_wrap}>
+              <Button className={css.btn} type="submit">
+                Search
+              </Button>
+              <Button
+                className={classNames(css.btn, css.btn_reset)}
+                onClick={resetForm}
+              >
+                Reset
+              </Button>
+            </div>
+          </Form>
+        )}
       </Formik>
     </section>
   );

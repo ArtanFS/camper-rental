@@ -5,13 +5,17 @@ import { useCampers } from 'hooks/useCampers';
 import { Icon, Button } from 'components/UI';
 import css from './FilterLocation.module.css';
 
-export const FilterLocation = ({ setLocation }) => {
+export const FilterLocation = ({ setLocation, reset }) => {
   const [queryLocation, setQueryLocation] = useState('');
   const [openListLocation, setOpenListLocation] = useState(false);
   const [filteredLocations, setFilteredLocations] = useState([]);
   const [isClickLocation, setIsClickLocation] = useState(false);
 
   const allCampers = useCampers();
+
+  useEffect(() => {
+    reset && setQueryLocation('');
+  }, [reset]);
 
   useEffect(() => {
     let allLocations = [];

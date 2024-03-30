@@ -3,7 +3,8 @@ import css from './FilterEquipment.module.css';
 import Label from 'components/Label/Label';
 import classNames from 'classnames';
 
-export const FilterEquipment = ({ setEquipment }) => {
+export const FilterEquipment = ({ setEquipment, reset }) => {
+
   return (
     <div className={css.filter_wrapper}>
       <div

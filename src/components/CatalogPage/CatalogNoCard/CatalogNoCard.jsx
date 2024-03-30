@@ -1,8 +1,8 @@
 import CardImg from 'components/CatalogPage/CatalogCardImg/CatalogCardImg';
-import css from './CatalogNoCards.module.css';
-import noCamp from '../../../images/noimage/nocamp.jpg';
+import css from './CatalogNoCard.module.css';
+import noCamp from 'images/noimage/nocamp.jpg';
 
-const NoCards = () => {
+export const CatalogNoCard = () => {
   return (
     <li className={css.card_item}>
       <CardImg src={noCamp} alt={'No campers found'} />
@@ -14,5 +14,3 @@ const NoCards = () => {
     </li>
   );
 };
-
-export default NoCards;

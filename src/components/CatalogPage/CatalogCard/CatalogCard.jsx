@@ -12,7 +12,7 @@ import classNames from 'classnames';
 import { useFavCampers } from 'hooks/useCampers';
 import { Icon, Button } from 'components/UI';
 
-const CatalogCard = ({ data }) => {
+export const CatalogCard = ({ data }) => {
   const [openDetailsModal, setOpenDetailsModal] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -92,5 +92,3 @@ const CatalogCard = ({ data }) => {
     </>
   );
 };
-
-export default CatalogCard;

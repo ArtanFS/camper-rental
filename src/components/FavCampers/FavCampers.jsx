@@ -1,4 +1,4 @@
-import CamperCard from 'components/CatalogPage/CatalogCard/CatalogCard';
+import { CatalogCard } from 'components/CatalogPage/CatalogCard';
 import css from './FavCampers.module.css';
 import { useFavCampers } from 'hooks/useCampers';
 
@@ -10,7 +10,7 @@ const FavCampers = () => {
       <ul className={css.card_list}>
         {favCampers.length > 0 &&
           favCampers.map(camper => (
-            <CamperCard key={camper._id} data={camper} />
+            <CatalogCard key={camper._id} data={camper} />
           ))}
       </ul>
     </section>

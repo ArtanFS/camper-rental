@@ -1,7 +1,7 @@
+import { CatalogCard } from '../CatalogCard';
+import { CatalogNoCard } from '../CatalogNoCard';
 import { Button } from 'components/UI';
-import CatalogCard from 'components/CatalogPage/CatalogCard/CatalogCard';
 import css from './Catalog.module.css';
-import NoCards from 'components/CatalogPage/CatalogNoCards/CatalogNoCards';
 
 export const Catalog = ({ campers, onClick, isLoadMore, filtered }) => {
   return (
@@ -14,7 +14,7 @@ export const Catalog = ({ campers, onClick, isLoadMore, filtered }) => {
                 <CatalogCard key={camper._id} data={camper} />
               ))
             ) : (
-              <NoCards />
+              <CatalogNoCard />
             ))}
         </ul>
         {campers.length > 0 && filtered && (
